@@ -1,0 +1,129 @@
+// -----------------------------------
+// DIFM Template: Footer Column 2
+// -----------------------------------
+
+
+// In: 'Snippets > Footers > Footer Column 2'
+
+
+// --------------------------------------
+
+//  *** LAYOUT INFO ***
+
+//  1. Column Left: Content & Profile
+//  2. Column Right: Content & Profile
+
+// --------------------------------------
+
+
+.template-footer--columns-2 {
+    padding: @value__global-spacing--desktop 0;
+    background-color: @color__footer--background;
+
+    @media @tablet {
+        padding: @value__global-spacing--tablet 0;
+        text-align: center;
+    }
+    @media @mobile {
+        padding: @value__global-spacing--mobile 0;
+    }
+
+
+
+    // Row
+    // -----------------------------
+
+
+    .row {
+        .flex-display;
+        .flex-wrap(wrap);
+        .align-items(center);
+        .justify-content(center);
+        margin-left: -@value__gutter-spacing;
+        margin-right: -@value__gutter-spacing;
+    }
+
+
+
+
+    // Footer Item
+    // -----------------------------
+
+
+    .footer-item {
+        .flex-basis(50%);
+        padding: 0 @value__gutter-spacing;
+
+        @media @tablet {
+            .flex-basis(100%);
+            padding: 10px @value__gutter-spacing;
+        }
+
+        &--profile-last p {
+            padding-bottom: 0;
+        }
+    }
+
+
+
+
+    // Profile Widget
+    // -----------------------------
+
+
+    // Form
+    .form-body {
+        .flex-display;
+        .align-items(flex-end);
+        .justify-content(center);
+        margin: 20px 0;
+    }
+
+    // Form Group
+    .form-group {
+        margin: 0;
+
+        &:first-child {
+            .flex-display;
+            .align-items(center);
+        }
+    }
+
+    // Input
+    .input {
+        min-height: 36px;
+        margin-right: 10px;
+    }
+
+    // Label
+    .label {
+        .flex(1 0 auto);
+        margin: 0 10px 0 0;
+    }
+
+
+    // Headline / Strapline
+    .headline,
+    .strapline {
+        padding-bottom: 10px;
+    }
+
+    // Address
+    .address-line {
+        display: inline-block;
+
+        @media @mobile {
+            padding-bottom: 0;
+        }
+
+        &:after {
+            position: relative;
+            left: -4px;
+            content: ",";
+        }
+        &:last-child:after {
+            display: none;
+        }
+    }
+
+}

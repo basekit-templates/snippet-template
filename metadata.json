@@ -1,0 +1,108 @@
+{
+    "name":"DIFM Template",
+    "widgetVersion": 2,
+    "thumbnail":"thumbnail.png",
+    "templateType":"standard",
+    "pageTypes": [ "standard" ],
+    "screenshot":"screenshot.jpg",
+    "colorSwatches":
+    {
+        "Swatch 1": {
+            "color1":"#ffffff",
+            "color2":"#1068c0",
+            "color3":"#e74234",
+            "color4":"#000000",
+            "color5":"#666666",
+            "color6":"#000000",
+            "color7":"#000000"
+        }
+    },
+    "fontSwatch": {
+       "title": "Karla / Merriweather",
+        "font1": {
+            "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
+            "font-size": "32px",
+            "font-weight": "400",
+            "line-height": "54px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font2": {
+            "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
+            "font-size": "24px",
+            "font-weight": "400",
+            "line-height": "36px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font3": {
+            "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
+            "font-size": "22px",
+            "font-weight": "400",
+            "line-height": "42px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font4": {
+            "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
+            "font-size": "20px",
+            "font-weight": "400",
+            "line-height": "36px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font5": {
+            "font-family": "\"Merriweather\", Georgia, serif",
+            "font-size": "18px",
+            "font-weight": "400",
+            "line-height": "27px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font6": {
+            "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
+            "font-size": "14px",
+            "font-weight": "400",
+            "line-height": "26px",
+            "color": "@color-swatch6",
+            "color-hover": "@color-swatch6",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch3",
+            "background-color-hover": "darken(@color-swatch3,8%)"
+        },
+        "font7": {
+            "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
+            "font-size": "18px",
+            "font-weight": "400",
+            "line-height": "27px",
+            "color": "@color-swatch3",
+            "letter-spacing": "1px",
+            "background-color": "@color-swatch3",
+            "background-color-hover": "darken(@color-swatch3,5%)"
+        },
+        "font8": {
+            "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
+            "font-size": "40px",
+            "font-weight": "400",
+            "line-height": "44px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        },
+        "font9": {
+            "font-family": "\"Merriweather\", Georgia, serif",
+            "font-size": "15px",
+            "font-weight": "400",
+            "line-height": "28px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        },
+        "font10": {
+            "font-family": "\"Bree Serif\", \"Merriweather\", Georgia, serif",
+            "font-size": "26px",
+            "font-weight": "700",
+            "line-height": "28px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        }
+    }
+}
