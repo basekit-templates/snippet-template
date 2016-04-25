@@ -5,25 +5,28 @@
 <div class="page  page--default">
 	<div class="site-container">
 
-		{% include "includes/header.twig" %}
 
+		{% include "snippets/headers/header--standard/header--standard.twig" %}
+
+
+		<!-- Page Title -->
 		<div class="page-title">
 			<div class="site-content">
 				{{ page.title }}
 			</div>
 		</div>
 
-		<div class="main">
-
-			<div class="site-content">
-				<div class="zone-content">
+		<!-- Main Content -->
+		<div id="main-scroll" class="main-content">
+			<div class="content-container">
 					{{zone('main')|raw}}
 				</div>
 			</div>
-
 		</div>
 
-		{% include "includes/footer.twig" %}
+
+		{% include "snippets/footers/footer--columns-3/footer--columns-3.twig" %}
+
 
 	</div>
 </div>
