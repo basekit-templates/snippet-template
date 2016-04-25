@@ -3,7 +3,7 @@
     "widgetVersion": 2,
     "thumbnail":"thumbnail.png",
     "templateType":"standard",
-    "pageTypes": [ "standard" ],
+    "pageTypes": [ "standard", "sidebar" ],
     "screenshot":"screenshot.jpg",
     "colorSwatches":
     {

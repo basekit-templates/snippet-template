@@ -65,7 +65,7 @@
 
 body {
     height: 100%;
-    background-color: #f2f2f2;
+    background-color: @color__body--background;
 }
 
 
@@ -75,7 +75,7 @@ body {
     max-width: @value__site-container--width;
     height: 100%;
     margin: 0 auto;
-    background-color: @color__body--background;
+    background-color: @color__container--background;
     overflow: hidden;
 
     @media @tablet {
@@ -103,8 +103,32 @@ body {
 }
 
 
-// Page: Standard
-.page--standard .main-content {
+// Page: Standard / Default
+// ------------------------
+
+
+.page--standard,
+.page--default {
+
+    .main-content {
+        padding: @value__global-spacing--desktop 0;
+
+        @media @tablet {
+            padding: @value__global-spacing--tablet 0;
+        }
+        @media @mobile {
+            padding: @value__global-spacing--mobile 0;
+        }
+    }
+
+}
+
+
+// Page: Sidebar
+// -------------
+
+
+.page--sidebar .zone-content {
     padding: @value__global-spacing--desktop 0;
 
     @media @tablet {
@@ -115,14 +139,20 @@ body {
     }
 }
 
-// Page: Sidebar
-.page--sidebar .zone-content {
-    padding: @value__global-spacing--desktop 0;
 
-    @media @tablet {
-        padding: @value__global-spacing--tablet 0;
-    }
-    @media @mobile {
-        padding: @value__global-spacing--mobile 0;
+
+
+// ------------------------------
+// Page Styles
+// ------------------------------
+
+
+.page-title {
+    padding: 10px 0;
+    background-color: #eee;
+
+    // Removes heading padding
+    * {
+        padding-bottom: 0;
     }
 }

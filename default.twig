@@ -1,34 +1,32 @@
 {% extends "layout.twig" %}
 
 {% block content %}
-
+<!-- Page Content -->
 <div class="page  page--default">
-	<div class="site-container">
 
 
-		{% include "snippets/headers/header--standard/header--standard.twig" %}
+	{% include "snippets/headers/header--standard/header--standard.twig" %}
 
 
-		<!-- Page Title -->
-		<div class="page-title">
-			<div class="site-content">
-				{{ page.title }}
-			</div>
+	<!-- Page Title -->
+	<div class="page-title">
+		<div class="content-container">
+			<h3>{{ page.title }}</h3>
 		</div>
-
-		<!-- Main Content -->
-		<div id="main-scroll" class="main-content">
-			<div class="content-container">
-					{{zone('main')|raw}}
-				</div>
-			</div>
-		</div>
-
-
-		{% include "snippets/footers/footer--columns-3/footer--columns-3.twig" %}
-
-
 	</div>
+
+	<!-- Main Content -->
+	<div id="main-scroll" class="main-content">
+		<div class="content-container">
+				{{zone('main')|raw}}
+			</div>
+		</div>
+	</div>
+
+
+	{% include "snippets/footers/footer--columns-3/footer--columns-3.twig" %}
+
+
 </div>
 
 {% endblock %}
