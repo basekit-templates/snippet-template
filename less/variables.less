@@ -4,7 +4,11 @@
 
 
 // ------------------------------
-// #Variables: Site Values
+// #Variables: Global
+// ------------------------------
+
+
+// Value Variables
 // ------------------------------
 
 
@@ -32,105 +36,8 @@
 
 
 
-// ---------------------------------
-// #Variables: V7
-// ---------------------------------
-
-
-// @color-swatch1: #ffffff;
-// @color-swatch2: #1068c0;
-// @color-swatch3: #e74234;
-// @color-swatch4: #000000;
-// @color-swatch5: #666666;
-// @color-swatch6: #000000;
-// @color-swatch7: #000000;
-
-
-// @font-swatch1-font-family: "Montserrat";
-// @font-swatch1-font-size:36px;
-// @font-swatch1-font-weight:inherit;
-// @font-swatch1-line-height:36px;
-// @font-swatch1-color:@color-swatch4;
-// @font-swatch1-letter-spacing:inherit;
-
-// @font-swatch2-font-family: "Montserrat";
-// @font-swatch2-font-size:24px;
-// @font-swatch2-font-weight:inherit;
-// @font-swatch2-line-height:inherit;
-// @font-swatch2-color:@color-swatch4;
-// @font-swatch2-letter-spacing:inherit;
-
-// @font-swatch3-font-family:"Montserrat";
-// @font-swatch3-font-size:18px;
-// @font-swatch3-font-weight:inherit;
-// @font-swatch3-line-height:inherit;
-// @font-swatch3-color:@color-swatch4;
-// @font-swatch3-letter-spacing:inherit;
-
-// @font-swatch4-font-family:"Montserrat";
-// @font-swatch4-font-size:16px;
-// @font-swatch4-font-weight:inherit;
-// @font-swatch4-line-height:inherit;
-// @font-swatch4-color:@color-swatch4;
-// @font-swatch4-letter-spacing:inherit;
-
-// @font-swatch5-font-family:"Merriweather";
-// @font-swatch5-font-size:14px;
-// @font-swatch5-font-weight:inherit;
-// @font-swatch5-line-height:28px;
-// @font-swatch5-color:@color-swatch5;
-// @font-swatch5-letter-spacing:inherit;
-
-// @font-swatch6-font-family:"Montserrat";
-// @font-swatch6-font-size:14px;
-// @font-swatch6-font-weight:inherit;
-// @font-swatch6-line-height:32px;
-// @font-swatch6-letter-spacing:inherit;
-// @font-swatch6-color:@color-swatch6;
-// @font-swatch6-color-hover:@color-swatch3;
-// @font-swatch6-background-color:@color-swatch2;
-// @font-swatch6-background-color-hover:@color-swatch1;
-
-// @font-swatch7-font-family:"Montserrat";
-// @font-swatch7-font-size:14px;
-// @font-swatch7-font-weight:inherit;
-// @font-swatch7-line-height:inherit;
-// @font-swatch7-letter-spacing:inherit;
-// @font-swatch7-color:@color-swatch1;
-// @font-swatch7-background-color:@color-swatch3;
-// @font-swatch7-background-color-hover:darken(@color-swatch3,10%);
-
-// @font-swatch8-font-family:"Montserrat";
-// @font-swatch8-font-size:40px;
-// @font-swatch8-font-weight:inherit;
-// @font-swatch8-line-height:44px;
-// @font-swatch8-letter-spacing:inherit;
-// @font-swatch8-color:@color-swatch1;
-
-// @font-swatch9-font-family:"Merriweather";
-// @font-swatch9-font-size:15px;
-// @font-swatch9-font-weight:inherit;
-// @font-swatch9-line-height:28px;
-// @font-swatch9-letter-spacing:inherit;
-// @font-swatch9-color:@color-swatch1;
-
-// @font-swatch10-font-family:"Montserrat";
-// @font-swatch10-font-size:24px;
-// @font-swatch10-font-weight:inherit;
-// @font-swatch10-line-height:28px;
-// @font-swatch10-letter-spacing:inherit;
-// @font-swatch10-color:@color-swatch4;
-
-
-
-
+// Color Values
 // ------------------------------
-// #Variables: V8
-// ------------------------------
-
-
-@color__primary: @color-swatch3;
-@color__secondary: @color-swatch2;
 
 
 @color__body--background:#e0e0e0;
@@ -141,8 +48,31 @@
 @color__header--background: #ffffff;
 @color__footer--background: #ffffff;
 @color__sidebar--background: #ffffff;
+@color__row--background--light: #f5f5f5;
+@color__row--background--dark: fade(#383838, 90%);
+
+@color__feature-content--background: #26292f;
 
 
+
+
+// ------------------------------
+// #Variables: V8
+// ------------------------------
+
+
+// -----------------------------------
+
+//  *** VARIABLE INFO ***
+
+//  These V8 variables map back to V7
+//  variables. Required for future
+//  version compatibility.
+
+// -----------------------------------
+
+
+// Company Name
 @font__companyname--font-family: @font-swatch10-font-family;
 @font__companyname--font-size: @font-swatch10-font-size;
 @font__companyname--font-weight: @font-swatch10-font-weight;
@@ -150,7 +80,7 @@
 @font__companyname--letter-spacing: @font-swatch10-letter-spacing;
 @color__companyname--text: @font-swatch10-color;
 
-
+// Heading 1
 @font__h1--font-family:@font-swatch1-font-family;
 @font__h1--font-size: @font-swatch1-font-size;
 @font__h1--font-weight: @font-swatch1-font-weight;
@@ -158,7 +88,7 @@
 @font__h1--letter-spacing:@font-swatch1-letter-spacing;
 @color__h1--text: @font-swatch1-color;
 
-
+// Heading 2
 @font__h2--font-family:@font-swatch2-font-family;
 @font__h2--font-size: @font-swatch2-font-size;
 @font__h2--font-weight: @font-swatch2-font-weight;
@@ -166,7 +96,7 @@
 @font__h2--letter-spacing:@font-swatch2-letter-spacing;
 @color__h2--text: @font-swatch2-color;
 
-
+// Heading 3
 @font__h3--font-family:@font-swatch3-font-family;
 @font__h3--font-size: @font-swatch3-font-size;
 @font__h3--font-weight: @font-swatch3-font-weight;
@@ -174,7 +104,7 @@
 @font__h3--letter-spacing:@font-swatch3-letter-spacing;
 @color__h3--text: @font-swatch3-color;
 
-
+// Heading 4
 @font__h4--font-family:@font-swatch4-font-family;
 @font__h4--font-size: @font-swatch4-font-size;
 @font__h4--font-weight: @font-swatch4-font-weight;
@@ -182,7 +112,7 @@
 @font__h4--letter-spacing:@font-swatch4-letter-spacing;
 @color__h4--text: @font-swatch4-color;
 
-
+// Paragraph
 @font__p--font-family:@font-swatch5-font-family;
 @font__p--font-size: @font-swatch5-font-size;
 @font__p--font-weight: @font-swatch5-font-weight;
@@ -190,7 +120,7 @@
 @font__p--letter-spacing:@font-swatch5-letter-spacing;
 @color__p--text: @font-swatch5-color;
 
-
+// Navigataion
 @font__navigation--font-family: @font-swatch6-font-family;
 @font__navigation--font-size: @font-swatch6-font-size;
 @font__navigation--font-weight: @font-swatch6-font-weight;
@@ -199,16 +129,7 @@
 @color__navigation--text: @font-swatch6-color;
 @color__navigation--text--hover: @font-swatch6-color-hover;
 
-
-@font__navigation--font-family: @font-swatch6-font-family;
-@font__navigation--font-size: @font-swatch6-font-size;
-@font__navigation--font-weight: @font-swatch6-font-weight;
-@font__navigation--line-height: @font-swatch6-line-height;
-@font__navigation--letter-spacing: @font-swatch6-letter-spacing;
-@color__navigation--text: @font-swatch6-color;
-@color__navigation--text--hover: @font-swatch6-color-hover;
-
-
+// Button
 @color__button--background: @font-swatch7-background-color;
 @color__button--background--hover: @font-swatch7-background-color-hover;
 @color__button--text: @font-swatch7-color;
@@ -218,9 +139,7 @@
 @font__button--line-height: @font-swatch7-line-height;
 @font__button--letter-spacing: @font-swatch7-letter-spacing;
 
-
-@color__feature-content--background: #26292f;
-
+// Feature Headline
 @color__feature-headline--background: @color__feature-content--background;
 @font__feature-headline--font-family: @font-swatch8-font-family;
 @font__feature-headline--font-size: @font-swatch8-font-size;
@@ -229,6 +148,7 @@
 @font__feature-headline--letter-spacing: @font-swatch8-letter-spacing;
 @color__feature-headline--text: @font-swatch8-color;
 
+// Feature Strapline
 @color__feature-strapline--background: @color__feature-content--background;
 @font__feature-strapline--font-family: @font-swatch9-font-family;
 @font__feature-strapline--font-size: @font-swatch9-font-size;

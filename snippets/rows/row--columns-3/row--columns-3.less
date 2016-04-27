@@ -1,0 +1,127 @@
+// -----------------------------------
+// Snippet Template: Row Column 3
+// -----------------------------------
+
+
+// In: 'Snippets > Rows > Row Column 3'
+
+
+// --------------------------------------
+
+//  *** LAYOUT INFO ***
+
+//  1. Row Title / Sub Title
+//  2. 3 Columns Layout:
+//     - Column Left: Text, Image, Text
+//     - Column Middle: Text, Image, Text
+//     - Column Right: Text, Image, Text
+
+// --------------------------------------
+
+
+.template-row--columns-3 {
+    position: relative;
+
+
+    // Template Row Background
+    // -----------------------------
+
+
+    .template-row-background {
+        padding: @value__global-spacing--desktop 0;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background-color: @color__row--background--light;
+        }
+
+        // Image Background
+        &--image {
+            background-image: image('/images/row-images/row-image-bg.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            &:after {
+                background-color: @color__row--background--dark;
+            }
+
+            h1, h2, h3, h4, p {
+                color: white;
+            }
+            p {
+                opacity: .7;
+            }
+        }
+    }
+
+
+    .content-container {
+        position: relative;
+        z-index: 2;
+    }
+
+
+
+
+    // Template Row Column Wrapper
+    // -----------------------------
+
+
+    .template-row-title {
+        padding-bottom: @value__global-spacing--desktop;
+        text-align: center;
+
+        @media @tablet {
+            padding-bottom: @value__global-spacing--tablet;
+        }
+        @media @mobile {
+            padding-bottom: @value__global-spacing--mobile;
+        }
+    }
+
+
+
+
+    // Template Row Column Wrapper
+    // -----------------------------
+
+
+    .template-row-column-wrapper {
+        .flex-display;
+        .flex-wrap(wrap);
+        .align-items(center);
+        .justify-content(center);
+        margin-left: -@value__gutter-spacing;
+        margin-right: -@value__gutter-spacing;
+    }
+
+
+
+
+    // Template Row Column
+    // -----------------------------
+
+
+    .template-row-column {
+        .flex-basis(33.33%);
+        padding: 0 @value__gutter-spacing;
+
+        @media @tablet {
+            .flex-basis(100%);
+            padding: 10px @value__gutter-spacing;
+        }
+    }
+
+
+    // Template Row Column Text
+    .template-row-column-text {
+        margin-top: 20px;
+    }
+
+}

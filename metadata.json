@@ -3,14 +3,14 @@
     "widgetVersion": 2,
     "thumbnail":"thumbnail.png",
     "templateType":"standard",
-    "pageTypes": [ "standard", "sidebar" ],
+    "pageTypes": [ "standard", "sidebar", "gallery", "video" ],
     "screenshot":"screenshot.jpg",
     "colorSwatches":
     {
         "Swatch 1": {
             "color1":"#ffffff",
             "color2":"#1068c0",
-            "color3":"#e74234",
+            "color3":"#f35547",
             "color4":"#000000",
             "color5":"#666666",
             "color6":"#000000",
@@ -18,70 +18,70 @@
         }
     },
     "fontSwatch": {
-       "title": "Karla / Merriweather",
+       "title": "Montserrat / Merriweather",
         "font1": {
-            "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
-            "font-size": "32px",
-            "font-weight": "400",
-            "line-height": "54px",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "36px",
+            "font-weight": "700",
+            "line-height": "50px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
         "font2": {
-            "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
-            "font-size": "24px",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "32px",
             "font-weight": "400",
             "line-height": "36px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
         "font3": {
-            "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
-            "font-size": "22px",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "20px",
             "font-weight": "400",
-            "line-height": "42px",
+            "line-height": "32px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
         "font4": {
-            "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
-            "font-size": "20px",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "16px",
             "font-weight": "400",
-            "line-height": "36px",
+            "line-height": "28px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
         "font5": {
             "font-family": "\"Merriweather\", Georgia, serif",
-            "font-size": "18px",
+            "font-size": "14px",
             "font-weight": "400",
-            "line-height": "27px",
+            "line-height": "28px",
             "color": "@color-swatch5",
             "letter-spacing": "inherit"
         },
         "font6": {
-            "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "14px",
             "font-weight": "400",
-            "line-height": "26px",
+            "line-height": "32px",
             "color": "@color-swatch6",
-            "color-hover": "@color-swatch6",
+            "color-hover": "@color-swatch3",
             "letter-spacing": "inherit",
-            "background-color": "@color-swatch3",
-            "background-color-hover": "darken(@color-swatch3,8%)"
+            "background-color": "@color-swatch1",
+            "background-color-hover": "@color-swatch1"
         },
         "font7": {
-            "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
-            "font-size": "18px",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "14px",
             "font-weight": "400",
-            "line-height": "27px",
-            "color": "@color-swatch3",
+            "line-height": "30px",
+            "color": "@color-swatch1",
             "letter-spacing": "1px",
             "background-color": "@color-swatch3",
             "background-color-hover": "darken(@color-swatch3,5%)"
         },
         "font8": {
-            "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "40px",
             "font-weight": "400",
             "line-height": "44px",
@@ -97,11 +97,11 @@
             "letter-spacing": "inherit"
         },
         "font10": {
-            "font-family": "\"Bree Serif\", \"Merriweather\", Georgia, serif",
-            "font-size": "26px",
-            "font-weight": "700",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "24px",
+            "font-weight": "400",
             "line-height": "28px",
-            "color": "@color-swatch5",
+            "color": "@color-swatch4",
             "letter-spacing": "inherit"
         }
     }
