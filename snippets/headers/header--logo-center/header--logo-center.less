@@ -17,20 +17,41 @@
 // -----------------------------------
 
 
-.template-header--logo-on-top {
-    text-align: center;
+.template-header--logo-center {
+    .flex-display;
+    .align-items(center);
+    .justify-content(space-between);
     padding: @value__header--spacing;
+    background-color: @color__header--background;
+
+    @media @tablet {
+        display: block;
+    }
 
 
-    // Navigation List
-    .navigation-list {
+    // Header Item
+    .header-item {
+        width: 33.333%;
+
+        @media @mobile {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+
+    // Header Item: Profile
+    .header-item--profile {
+        @media @mobile {
+            margin-bottom: 10px;
+        }
+    }
+
+    // Header Item: Logo / Companyname
+    .header-item--logo-companyname {
         text-align: center;
     }
 
-    // Navigation Link
-    .navigation-item .item-name {
-        padding: 0 15px;
-    }
 
     // Logo
     .logo {

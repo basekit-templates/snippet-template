@@ -30,10 +30,20 @@
     .template-row-background {
         padding: @value__global-spacing--desktop 0;
 
+        @media @tablet {
+            padding: @value__global-spacing--tablet 0;
+        }
+        @media @mobile {
+            padding: @value__global-spacing--mobile 0;
+        }
+
+        // Row Overlay
         &:after {
             content: "";
             position: absolute;
             top: 0;
+            left: 0;
+            right: 0;
             z-index: 1;
             width: 100%;
             height: 100%;
@@ -51,6 +61,7 @@
                 background-color: @color__row--background--dark;
             }
 
+            // Invert Typography
             h1, h2, h3, h4, p {
                 color: white;
             }
@@ -83,6 +94,10 @@
         @media @mobile {
             padding-bottom: @value__global-spacing--mobile;
         }
+
+        p {
+            padding-bottom: 0;
+        }
     }
 
 
@@ -94,11 +109,14 @@
 
     .template-row-column-wrapper {
         .flex-display;
-        .flex-wrap(wrap);
         .align-items(center);
         .justify-content(center);
         margin-left: -@value__gutter-spacing;
         margin-right: -@value__gutter-spacing;
+
+        @media @mobile {
+            .flex-wrap(wrap);
+        }
     }
 
 
@@ -109,11 +127,9 @@
 
 
     .template-row-column {
-        .flex-basis(33.33%);
         padding: 0 @value__gutter-spacing;
 
         @media @tablet {
-            .flex-basis(100%);
             padding: 10px @value__gutter-spacing;
         }
     }
