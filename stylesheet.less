@@ -54,8 +54,12 @@
 @import "@{templateLocal}/snippets/navigation/nav--fullscreen-closed/nav--fullscreen-closed.less";
 
 // Rows
-@import "@{templateLocal}/snippets/rows/row--columns-3/row--columns-3.less";
+@import "@{templateLocal}/snippets/rows/rows.less";
 @import "@{templateLocal}/snippets/rows/row--text-simple/row--text-simple.less";
+@import "@{templateLocal}/snippets/rows/row--heading/row--heading.less";
+@import "@{templateLocal}/snippets/rows/row--gallery/row--gallery.less";
+@import "@{templateLocal}/snippets/rows/row--columns-2/row--columns-2.less";
+@import "@{templateLocal}/snippets/rows/row--columns-3/row--columns-3.less";
 
 // Widgets
 @import "@{templateLocal}/widgets/feature.less";
@@ -93,6 +97,21 @@ body {
     width: 100%;
     max-width: @value__content-container--width;
     margin: 0 auto;
+
+    @media @tablet {
+        width: 90%;
+    }
+}
+
+
+
+
+// Typography
+// ------------------------------
+
+
+h1, h2, h3, h4, p, a {
+    -webkit-font-smoothing: antialiased;
 }
 
 

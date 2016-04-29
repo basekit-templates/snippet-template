@@ -1,0 +1,131 @@
+// -----------------------------------
+// Snippet Template: Row Gallery
+// -----------------------------------
+
+
+// In: 'Snippets > Rows > Row Gallery'
+
+
+// --------------------------------------
+
+//  *** LAYOUT INFO ***
+
+//  1. Row Title / Sub Title
+//  2. Gallery Widget
+
+// --------------------------------------
+
+
+.template-row--gallery {
+    .clearfix;
+
+
+    // Template Row Background
+    // -----------------------------
+
+
+    .template-row-background {
+        .clearfix;
+    }
+
+
+
+
+    // Template Row Title
+    // -----------------------------
+
+
+    .template-row-title {
+        padding-bottom: @value__global-spacing--desktop;
+        text-align: center;
+
+        @media @tablet {
+            padding-bottom: @value__global-spacing--tablet;
+        }
+        @media @mobile {
+            padding-bottom: @value__global-spacing--mobile;
+        }
+    }
+
+
+
+
+    // Gallery Items
+    // -----------------------------
+
+
+    .gallery-item {
+        position: relative;
+        float: left;
+        height: 0;
+        overflow: hidden;
+    }
+
+
+    // Gallery Link
+    .image-link {
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    // Hide Image Element
+    .gallery__image {
+        display: none;
+    }
+
+}
+
+
+
+
+// Gallery Grid Layouts
+// -----------------------------
+
+
+// 2 Column
+.gallery-grid--2-columns {
+    .gallery-item {
+        width: 50%;
+        padding-bottom: 50%;
+
+        @media @mobile {
+            width: 100%;
+            padding-bottom: 100%;
+        }
+    }
+}
+
+// 3 Column
+.gallery-grid--3-columns {
+    .gallery-item {
+        width: 33.333%;
+        padding-bottom: 33.333%;
+
+        @media @mobile {
+            width: 50%;
+            padding-bottom: 50%;
+        }
+    }
+}
+
+// 4 Column
+.gallery-grid--4-columns {
+    .gallery-item {
+        width: 25%;
+        padding-bottom: 25%;
+
+        @media @tablet {
+            width: 33.333%;
+            padding-bottom: 33.333%;
+        }
+        @media @mobile {
+            width: 50%;
+            padding-bottom: 50%;
+        }
+    }
+}
+

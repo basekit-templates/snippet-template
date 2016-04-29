@@ -1,0 +1,161 @@
+// -----------------------------------
+// Snippet Template: Rows
+// -----------------------------------
+
+
+// In: 'Snippets > Rows'
+
+
+// --------------------------------------
+
+//  *** STYLE INFO ***
+
+//  These are defualt styles for all
+//  row snippets. Required.
+
+// --------------------------------------
+
+
+
+
+// Template Row
+// -----------------------------
+
+
+.row-options {
+    position: relative;
+}
+
+
+
+
+// Template Row Background
+// -----------------------------
+
+
+.template-row-background {
+    padding: @value__global-spacing--desktop 0;
+
+    @media @tablet {
+        padding: @value__global-spacing--tablet 0;
+    }
+    @media @mobile {
+        padding: @value__global-spacing--mobile 0;
+    }
+
+
+    // Content Container
+    .content-container {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+
+
+
+// Template Row Title
+// -----------------------------
+
+
+.template-row-title {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+
+    p:last-child,
+    h1:last-child,
+    h2:last-child,
+    h3:last-child,
+    h4:last-child  {
+        padding-bottom: 0;
+    }
+}
+
+
+
+
+// Row Type: Image
+// -----------------------------
+
+
+.row-bg--image {
+    background-image: image('/images/row-images/row-image-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    // Colour Overlay
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-color: hsla(hue(@color__row--background--dark), saturation(@color__row--background--dark), lightness(@color__row--background--dark), @color__row--background--opacity);
+    }
+
+    // Invert Typography
+    h1, h2, h3, h4, p {
+        color: white;
+    }
+    p {
+        opacity: .7;
+    }
+}
+
+
+
+
+
+// Row Type: Solid Colour
+// -----------------------------
+
+
+.row-bg--solid {
+
+    // Colour Overlay
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+    }
+
+
+    // Light
+    // ----------
+
+    &--light:after {
+        background-color: @color__row--background--light;
+    }
+
+
+    // Dark
+    // ----------
+
+    &--dark {
+
+        // Colour Overlay
+        &:after {
+            background-color: @color__row--background--dark;
+        }
+
+        // Invert Typography
+        h1, h2, h3, h4, p {
+            color: white;
+        }
+        p {
+            opacity: .7;
+        }
+    }
+
+}

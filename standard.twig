@@ -10,7 +10,7 @@
 
 
 	<!-- Feature -->
-	<div class="feature-height--medium  feature-alignment--middle-center  feature-overlay-type--box  feature-parallax--on">
+	<div class="feature-options  feature-height--medium  feature-alignment--middle-center  feature-overlay-type--box  feature-parallax--on">
 		{{widget('feature', 'feature', {
 		  'header': 'profile',
 		  'strapline': 'profile',
@@ -22,10 +22,35 @@
 	</div>
 
 
-	<!-- Rows -->
-	{% include "snippets/rows/row--columns-3/row--columns-3.twig" %}
-	{% include "snippets/rows/row--text-simple/row--text-simple.twig" %}
-	{% include "snippets/rows/row--columns-3/row--columns-3--image.twig" %}
+	<!-- Row: Text Simple (Light) -->
+	<div class="row-options  row-bg--solid  row-bg--solid--light">
+		{% include "snippets/rows/row--text-simple/row--text-simple.twig" %}
+	</div>
+
+	<!-- Row: Heading (Image) -->
+	<div class="row-options  row-bg--image">
+		{% include "snippets/rows/row--heading/row--heading.twig" %}
+	</div>
+
+	<!-- Row: Gallery (3 Column) -->
+	<div class="row-options  row-bg--solid  row-type--gallery  gallery-grid--3-columns">
+		{% include "snippets/rows/row--gallery/row--gallery.twig" %}
+	</div>
+
+	<!-- Row: 2 Columns -->
+	<div class="row-options  row-bg--solid  row-bg--solid--light">
+		{% include "snippets/rows/row--columns-2/row--columns-2.twig" %}
+	</div>
+
+	<!-- Row: Text Simple (Light) -->
+	<div class="row-options  row-bg--solid">
+		{% include "snippets/rows/row--text-simple/row--text-simple.twig" %}
+	</div>
+
+	<!-- Row: 3 Columns (Image) -->
+	<div class="row-options  row-bg--image">
+		{% include "snippets/rows/row--columns-3/row--columns-3.twig" %}
+	</div>
 
 
 	<!-- Main Content -->

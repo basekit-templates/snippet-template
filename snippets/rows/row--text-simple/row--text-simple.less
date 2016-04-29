@@ -1,9 +1,9 @@
 // -----------------------------------
-// Snippet Template: Row Column 3
+// Snippet Template: Row Text Simple
 // -----------------------------------
 
 
-// In: 'Snippets > Rows > Row Column 3'
+// In: 'Snippets > Rows > Row Text Simple'
 
 
 // --------------------------------------
@@ -16,55 +16,5 @@
 
 
 .template-row--text-simple {
-    position: relative;
-    text-align: center;
-
-
-    // Template Row Background
-    // -----------------------------
-
-
-    .template-row-background {
-        // background-image: image('/images/row-images/row-image-bg.jpg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        padding: @value__global-spacing--desktop 0;
-
-        @media @tablet {
-            padding: @value__global-spacing--tablet 0;
-        }
-        @media @mobile {
-            padding: @value__global-spacing--mobile 0;
-        }
-
-        // Row Overlay
-        &:after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1;
-            width: 100%;
-            height: 100%;
-            // background-color: @color__row--background--dark;
-            background-color: @color__row--background--light;
-        }
-
-        // Invert Typography
-        // h1, h2, h3, h4, p {
-        //     color: white;
-        // }
-        // p {
-        //     opacity: .7;
-        // }
-    }
-
-
-    .content-container {
-        position: relative;
-        z-index: 2;
-    }
 
 }
