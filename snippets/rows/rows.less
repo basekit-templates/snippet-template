@@ -24,6 +24,25 @@
 
 .row-options {
     position: relative;
+
+    // Colour Overlay
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+    }
+
+    // Content Container
+    .content-container {
+        position: relative;
+        z-index: 2;
+    }
 }
 
 
@@ -41,13 +60,6 @@
     }
     @media @mobile {
         padding: @value__global-spacing--mobile 0;
-    }
-
-
-    // Content Container
-    .content-container {
-        position: relative;
-        z-index: 2;
     }
 }
 
@@ -75,9 +87,12 @@
 
 
 
-// Row Type: Image
+// Row Types (Variations)
 // -----------------------------
 
+
+// Row BG: Image
+// -------------
 
 .row-bg--image {
     background-image: image('/images/row-images/row-image-bg.jpg');
@@ -97,65 +112,41 @@
         height: 100%;
         background-color: hsla(hue(@color__row--background--dark), saturation(@color__row--background--dark), lightness(@color__row--background--dark), @color__row--background--opacity);
     }
+}
 
-    // Invert Typography
+
+
+
+// Row BG: Light
+// ---------------
+
+.row-bg--light:after {
+    background-color: @color__row--background--light;
+}
+
+
+
+
+// Row BG: Dark
+// ---------------
+
+.row-bg--dark:after {
+    background-color: @color__row--background--dark;
+}
+
+
+
+
+// Row Text
+// -----------------------------
+
+
+// Light
+.row-text--light {
     h1, h2, h3, h4, p {
         color: white;
     }
     p {
         opacity: .7;
     }
-}
-
-
-
-
-
-// Row Type: Solid Colour
-// -----------------------------
-
-
-.row-bg--solid {
-
-    // Colour Overlay
-    &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-        background-color: white;
-    }
-
-
-    // Light
-    // ----------
-
-    &--light:after {
-        background-color: @color__row--background--light;
-    }
-
-
-    // Dark
-    // ----------
-
-    &--dark {
-
-        // Colour Overlay
-        &:after {
-            background-color: @color__row--background--dark;
-        }
-
-        // Invert Typography
-        h1, h2, h3, h4, p {
-            color: white;
-        }
-        p {
-            opacity: .7;
-        }
-    }
-
 }
