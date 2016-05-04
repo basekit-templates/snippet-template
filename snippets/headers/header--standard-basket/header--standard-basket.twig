@@ -1,0 +1,11 @@
+<!-- Header: Standard -->
+<header class="template-header  template-header--standard-basket">
+	<div class="header-item  header-item--logo-companyname">
+		{{widget('logo', 'header-logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+		{{widget('companyname', 'header-companyname', {"business": "profile" })|raw}}
+	</div>
+	<div class="header-item  header-item--navigation">
+        {% include "snippets/navigation/nav--simple/nav--simple.twig" %}
+        {{widget('ecombasket', 'header-basket', {})|raw}}
+	</div>
+</header>

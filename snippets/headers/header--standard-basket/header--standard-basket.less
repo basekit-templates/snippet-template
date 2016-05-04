@@ -1,0 +1,181 @@
+// ----------------------------------------
+// Snippet Template: Header Standard Basket
+// ----------------------------------------
+
+
+// In: 'Snippets > Headers > Header Standard Basket'
+
+
+// -----------------------------------
+
+//  *** LAYOUT INFO ***
+
+//  1. Logo & Company Name (left)
+//  2. Navigation (right)
+//  3. Basket Widget
+
+//  This snippet is best used with:
+
+//  - Navigation: Fullscreen
+
+// -----------------------------------
+
+
+.template-header--standard-basket {
+    .flex-display;
+    .align-items(center);
+    .justify-content(space-between);
+    padding: @value__header--spacing;
+    background-color: @color__header--background;
+
+    @media @mobile {
+        .flex-direction(column);
+        margin-top: 58px; // Header height
+    }
+
+
+
+    // Header Item
+    // -------------------------------
+
+
+    .header-item {
+        @media @mobile {
+            width: 100%;
+        }
+    }
+
+
+
+    // Header Item: Logo / Companyname
+    // -------------------------------
+
+
+    .header-item--logo-companyname {
+        .flex-display;
+        .align-items(center);
+        min-width: 370px;
+
+        @media @mobile {
+            display: block;
+            .flex-order(2);
+            min-width: 100%;
+            text-align: center;
+        }
+    }
+
+    // Logo
+    .logo {
+        margin-right: 20px;
+
+        @media @tablet {
+            margin-right: 10px;
+        }
+        @media @mobile {
+            margin-bottom: 10px;
+        }
+    }
+
+
+
+
+    // Header Item: Navigation
+    // -----------------------------
+
+
+    .header-item--navigation {
+        .flex-display;
+        .justify-content(flex-end);
+        .align-items(center);
+        .flex(1 1 auto);
+
+        @media @tablet {
+            .flex-direction(row-reverse);
+            .justify-content(flex-start);
+        }
+        @media @mobile {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            .justify-content(space-between);
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 10px 10px;
+            background: @color__header--background;
+            border-bottom: 1px solid @color__site-body--border;
+        }
+    }
+
+
+
+
+    // Navigation Overrides
+    // -----------------------------
+
+
+    // Fullscreen
+    .template-navigation--fullscreen,
+    .template-navigation--fullscreen-closed {
+        .navigation-toggle {
+            @media @tablet {
+                position: relative;
+                top: 0;
+            }
+        }
+    }
+
+    // Fullscreen
+    .template-navigation--simple {
+        margin-top: 0;
+    }
+
+
+
+
+    // Basket
+    // -----------------------------
+
+
+    // Basket Toggle
+    .basket-toggle {
+        margin-left: 20px;
+        margin-bottom: 0;
+        white-space: nowrap;
+
+        @media @mobile {
+            margin-left: 0;
+        }
+    }
+
+    // Basket Text
+    .basket-text {
+        display: none;
+    }
+
+    // Basket Body
+    .basket-body {
+        position: absolute;
+        right: 0;
+        z-index: 5;
+        width: 300px;
+        padding: 20px;
+        background-color: @color__header--background;
+
+        @media @mobile {
+            position: fixed;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: scroll;
+        }
+    }
+
+    // Basket Footer
+    .basket-footer {
+        @media @mobile {
+            margin: 20px 0 60px;
+        }
+    }
+
+}
