@@ -25,19 +25,6 @@
 .row-options {
     position: relative;
 
-    // Colour Overlay
-    &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-        background-color: white;
-    }
-
     // Content Container
     .content-container {
         position: relative;
@@ -71,71 +58,31 @@
 
 
 
-// Template Row Title
-// -----------------------------
-
-
-.template-row-title {
-    max-width: 850px;
-    margin: 0 auto;
-    text-align: center;
-
-    p:last-child,
-    h1:last-child,
-    h2:last-child,
-    h3:last-child,
-    h4:last-child  {
-        padding-bottom: 0;
-    }
-}
-
-
-
-
-// Row Types (Variations)
+// Row Backgrounds
 // -----------------------------
 
 
 // Row BG: Image
-// -------------
-
 .row-bg--image {
     background-image: image('/images/row-images/row-image-bg.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 
-    // Colour Overlay
-    &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1;
-        width: 100%;
-        height: 100%;
+    .template-row-background {
         background-color: hsla(hue(@color__row--background--dark), saturation(@color__row--background--dark), lightness(@color__row--background--dark), @color__row--background--opacity);
     }
 }
 
 
-
-
 // Row BG: Light
-// ---------------
-
-.row-bg--light:after {
+.row-bg--light .template-row-background {
     background-color: @color__row--background--light;
 }
 
 
-
-
 // Row BG: Dark
-// ---------------
-
-.row-bg--dark:after {
+.row-bg--dark .template-row-background {
     background-color: @color__row--background--dark;
 }
 
@@ -153,5 +100,26 @@
     }
     p {
         opacity: .7;
+    }
+}
+
+
+
+
+// Template Row Title
+// -----------------------------
+
+
+.template-row-title {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+
+    p:last-child,
+    h1:last-child,
+    h2:last-child,
+    h3:last-child,
+    h4:last-child  {
+        padding-bottom: 0;
     }
 }
