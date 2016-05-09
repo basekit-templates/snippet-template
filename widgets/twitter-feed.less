@@ -1,0 +1,68 @@
+// ----------------------------------------
+// Snippet Template: Widgets > Twitter Feed
+// ----------------------------------------
+
+
+// In: 'Widgets > Twitter Feed'
+
+
+// ------------------------------
+// #Twitter Widget
+// ------------------------------
+
+
+// Tweet List
+// ------------------------------
+
+
+.tweet-list {
+    .flex-display;
+    margin-left: -@value__gutter-spacing;
+    margin-right: -@value__gutter-spacing;
+}
+
+
+// Column Styles
+.responsivecolumns {
+    .tweet-list {
+        display: block;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .tweet-item {
+        margin-bottom: 20px;
+        padding: 0;
+    }
+}
+
+
+// Row Alignment: Left
+.row-alignment--left .tweet-list {
+    .justify-content(flex-start);
+}
+
+// Row Alignment: Center
+.row-alignment--center .tweet-list {
+    .justify-content(center);
+}
+
+// Row Alignment: Right
+.row-alignment--right .tweet-list {
+    .justify-content(flex-end);
+}
+
+
+
+
+// Tweet Item
+// ------------------------------
+
+
+.tweet-item {
+    margin-bottom: 0;
+    padding: 0 @value__gutter-spacing;
+
+    @media @mobile {
+        margin-bottom: 20px;
+    }
+}

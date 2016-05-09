@@ -1,59 +1,57 @@
 <!-- Template Row: Gallery -->
 <section class="template-row  template-row--gallery">
-    <div class="template-row-background">
-        <div class="content-container">
+    <div class="template-row-wrapper">
 
-            <div class="template-row-title">
-                {{widget('content', 'row--gallery__row-title-text1', { content: '
-                    <h2>Lorem Ipsum Dolor</h2>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
-                '})|raw}}
-            </div>
-
-            <div class="template-row-gallery">
-                {{widget('gallery', 'row--gallery__row-gallery', {
-                    'showTitle': true,
-                    'showDescription': false,
-                    'images':[
-                        {
-                            'url':asset('/images/row-images/row-image1.jpg'),
-                            'title':'Row Image One'
-                        },
-                        {
-                            'url':asset('/images/row-images/row-image2.jpg'),
-                            'title':'Row Image Two'
-                        },
-                        {
-                            'url':asset('/images/row-images/row-image3.jpg'),
-                            'title':'Row Image Three'
-                        },
-                        {
-                            'url':asset('/images/row-images/row-image4.jpg'),
-                            'title':'Row Image Four'
-                        },
-                        {
-                            'url':asset('/images/row-images/row-image5.jpg'),
-                            'title':'Row Image Five'
-                        },
-                        {
-                            'url':asset('/images/row-images/row-image6.jpg'),
-                            'title':'Row Image Six'
-                        },
-                        {
-                            'url':asset('/images/row-images/row-image7.jpg'),
-                            'title':'Row Image Seven'
-                        },
-                        {
-                            'url':asset('/images/row-images/row-image8.jpg'),
-                            'title':'Row Image Eight'
-                        },
-                        {
-                            'url':asset('/images/row-images/row-image9.jpg'),
-                            'title':'Row Image Nine'
-                        },
-                ]})|raw}}
-            </div>
-
+        <div class="template-row-title">
+            {{widget('content', 'row--gallery__row-title-text1', { content: '
+                <h2>Lorem Ipsum Dolor</h2>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+            '})|raw}}
         </div>
+
+        <div class="template-row-gallery">
+            {{widget('gallery', 'row--gallery__row-gallery', {
+                'showTitle': true,
+                'showDescription': false,
+                'images':[
+                    {
+                        'url':asset('/images/row-images/row-image1.jpg'),
+                        'title':'Row Image One'
+                    },
+                    {
+                        'url':asset('/images/row-images/row-image2.jpg'),
+                        'title':'Row Image Two'
+                    },
+                    {
+                        'url':asset('/images/row-images/row-image3.jpg'),
+                        'title':'Row Image Three'
+                    },
+                    {
+                        'url':asset('/images/row-images/row-image4.jpg'),
+                        'title':'Row Image Four'
+                    },
+                    {
+                        'url':asset('/images/row-images/row-image5.jpg'),
+                        'title':'Row Image Five'
+                    },
+                    {
+                        'url':asset('/images/row-images/row-image6.jpg'),
+                        'title':'Row Image Six'
+                    },
+                    {
+                        'url':asset('/images/row-images/row-image7.jpg'),
+                        'title':'Row Image Seven'
+                    },
+                    {
+                        'url':asset('/images/row-images/row-image8.jpg'),
+                        'title':'Row Image Eight'
+                    },
+                    {
+                        'url':asset('/images/row-images/row-image9.jpg'),
+                        'title':'Row Image Nine'
+                    },
+            ]})|raw}}
+        </div>
+
     </div>
 </section>

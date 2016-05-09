@@ -6,45 +6,18 @@
 // In: 'Snippets > Rows'
 
 
-// --------------------------------------
-
-//  *** STYLE INFO ***
-
-//  These are defualt styles for all
-//  row snippets. Required.
-
-// --------------------------------------
-
-
-
-
-// Template Row
+// -----------------------------
+// Row / Widget Spacing
 // -----------------------------
 
 
-.row-options {
-    position: relative;
-
-    // Content Container
-    .content-container {
-        position: relative;
-        z-index: 2;
-    }
-
-    // Widget Override
-    .widget--zone-widget {
-        margin-bottom: 0;
-    }
-}
-
-
-
-
-// Template Row Background
-// -----------------------------
-
-
-.template-row-background {
+// Adds spacing for any single widget and
+// responsive columns wrapper in the zone.
+.bk-zone > .widget,
+.responsivecolumns {
+    width: 100%;
+    max-width: @value__content-container--width;
+    margin: 0 auto;
     padding: @value__global-spacing--desktop 0;
 
     @media @tablet {
@@ -53,6 +26,47 @@
     @media @mobile {
         padding: @value__global-spacing--mobile 0;
     }
+}
+
+// Removes zone widget spacing for row widgets
+.widget--zone-widget {
+    margin-bottom: 0;
+}
+
+// Remove spacing when responsive columns
+// and any widget is below a single widget
+.widget + {
+    .responsivecolumns,
+    .widget {
+        padding-top: 0;
+    }
+}
+
+
+
+
+// -----------------------------
+// #Row Options
+// -----------------------------
+
+
+// Row Alignment
+// -----------------------------
+
+
+// Left
+.row-alignment--left {
+    text-align: left;
+}
+
+// Right
+.row-alignment--right {
+    text-align: right;
+}
+
+// Center
+.row-alignment--center {
+    text-align: center;
 }
 
 
@@ -69,20 +83,20 @@
     background-position: center;
     background-size: cover;
 
-    .template-row-background {
+    .template-row {
         background-color: hsla(hue(@color__row--background--dark), saturation(@color__row--background--dark), lightness(@color__row--background--dark), @color__row--background--opacity);
     }
 }
 
 
 // Row BG: Light
-.row-bg--light .template-row-background {
+.row-bg--light .template-row {
     background-color: @color__row--background--light;
 }
 
 
 // Row BG: Dark
-.row-bg--dark .template-row-background {
+.row-bg--dark .template-row {
     background-color: @color__row--background--dark;
 }
 
@@ -106,15 +120,34 @@
 
 
 
-// Template Row Title
+// -----------------------------
+// #Template Row Wrapper
+// -----------------------------
+
+
+.template-row-wrapper {
+    max-width: @value__content-container--width;
+    margin: 0 auto;
+    padding: @value__global-spacing--desktop 0;
+    .clearfix;
+
+    @media @tablet {
+        padding: @value__global-spacing--tablet 0;
+    }
+    @media @mobile {
+        padding: @value__global-spacing--mobile 0;
+    }
+}
+
+
+
+
+// -----------------------------
+// #Template Row Title
 // -----------------------------
 
 
 .template-row-title {
-    max-width: 850px;
-    margin: 0 auto;
-    text-align: center;
-
     p:last-child,
     h1:last-child,
     h2:last-child,
