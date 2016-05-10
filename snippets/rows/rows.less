@@ -11,36 +11,55 @@
 // -----------------------------
 
 
-// Removes zone widget spacing for row widgets
-.widget--zone-widget {
-    margin-bottom: 0;
-}
-
-
 // Adds spacing for responsive columns
 // wrapper and single widget rows
+
+// ** 'data-name' = Editor attribute
+// ** 'data-widget-type' = TDK attribute
+
 .responsivecolumns,
 [data-widget-type="content"],
+[data-name="content"],
 [data-widget-type="line"],
+[data-name="line"],
 [data-widget-type="gallery"],
+[data-name="gallery"],
 [data-widget-type="image"],
-[data-widget-type="slideshow"],
+[data-name="image"],
+[data-widget-type="responsiveslideshow"],
+[data-name="responsiveslideshow"],
 [data-widget-type="button"],
+[data-name="button"],
 [data-widget-type="tweet"],
+[data-name="tweet"],
 [data-widget-type="clicktocall"],
+[data-name="clicktocall"],
 [data-widget-type="dropbox"],
+[data-name="dropbox"],
 [data-widget-type="facebooklike"],
+[data-name="facebooklike"],
 [data-widget-type="socialicons"],
+[data-name="socialicons"],
 [data-widget-type="singupform"],
+[data-name="singupform"],
 [data-widget-type="contactform"],
+[data-name="contactform"],
 [data-widget-type="advancedcontactform"],
+[data-name="advancedcontactform"],
 [data-widget-type="map"],
+[data-name="map"],
 [data-widget-type="youtube"],
+[data-name="youtube"],
 [data-widget-type="disqus"],
+[data-name="disqus"],
 [data-widget-type="twitter"],
+[data-name="twitter"],
 [data-widget-type="blogpostlist"],
+[data-name="blogpostlist"],
 [data-widget-type="blogpost"],
-[data-widget-type="contactform"] {
+[data-name="blogpost"],
+[data-widget-type="profile"],
+[data-name="profile"] {
     width: 100%;
     max-width: @value__content-container--width;
     margin: 0 auto;
