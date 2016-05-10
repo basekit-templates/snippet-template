@@ -1,9 +1,11 @@
 <!-- Footer: Central -->
 <footer class="template-footer  template-footer--central">
-	<div class="footer-item  footer-item--profile-first">
-		{{widget('profile', 'footer-profile1', { 'profileType':'address' })|raw}}
-	</div>
-	<div class="footer-item  footer-item--profile-last">
-        {{widget('profile', 'footer-profile2', { 'profileType':'copyright' })|raw}}
-	</div>
+    <div class="template-row-wrapper">
+    	<div class="footer-item  footer-item--profile-first">
+    		{{widget('profile', 'footer-profile1', { 'profileType':'address' })|raw}}
+    	</div>
+    	<div class="footer-item  footer-item--profile-last">
+            {{widget('profile', 'footer-profile2', { 'profileType':'copyright' })|raw}}
+    	</div>
+    </div>
 </footer>

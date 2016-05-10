@@ -11,10 +11,36 @@
 // -----------------------------
 
 
-// Adds spacing for any single widget and
-// responsive columns wrapper in the zone.
-.bk-zone > .widget,
-.responsivecolumns {
+// Removes zone widget spacing for row widgets
+.widget--zone-widget {
+    margin-bottom: 0;
+}
+
+
+// Adds spacing for responsive columns
+// wrapper and single widget rows
+.responsivecolumns,
+[data-widget-type="content"],
+[data-widget-type="line"],
+[data-widget-type="gallery"],
+[data-widget-type="image"],
+[data-widget-type="slideshow"],
+[data-widget-type="button"],
+[data-widget-type="tweet"],
+[data-widget-type="clicktocall"],
+[data-widget-type="dropbox"],
+[data-widget-type="facebooklike"],
+[data-widget-type="socialicons"],
+[data-widget-type="singupform"],
+[data-widget-type="contactform"],
+[data-widget-type="advancedcontactform"],
+[data-widget-type="map"],
+[data-widget-type="youtube"],
+[data-widget-type="disqus"],
+[data-widget-type="twitter"],
+[data-widget-type="blogpostlist"],
+[data-widget-type="blogpost"],
+[data-widget-type="contactform"] {
     width: 100%;
     max-width: @value__content-container--width;
     margin: 0 auto;
@@ -28,19 +54,22 @@
     }
 }
 
-// Removes zone widget spacing for row widgets
-.widget--zone-widget {
-    margin-bottom: 0;
-}
 
-// Remove spacing when responsive columns
-// and any widget is below a single widget
-.widget + {
-    .responsivecolumns,
+// Remove styles when widget is in row
+.template-row,
+.responsivecolumns {
     .widget {
-        padding-top: 0;
+        max-width: 100%;
+        padding: 0;
     }
 }
+
+
+// Removes spacing below a single widget
+.widget + .widget {
+    padding-bottom: 0;
+}
+
 
 
 

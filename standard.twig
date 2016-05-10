@@ -22,6 +22,51 @@
 		</div>
 
 
+		<!-- Row: Twitter (Columns) -->
+		{{widget('contactform', 'contact', {
+			'text': 'Submit',
+			'formTitle': 'Contact Us',
+			'email': 'profile'
+		})|raw}}
+
+
+		<div class="responsivecolumns">
+			<div class="column  columns-three-left">
+				{{widget('twitter', 'twitter-feed', {
+		            "tweets": [
+			            {
+							"text": "How To Get Big-Brand Search Visibility",
+							"createdAt": "Thu Aug 01 11:30:49 +0000 2013",
+							"source": "<a href=\"http://www.tweetdeck.com\" rel=\"nofollow\">TweetDeck</a>",
+							"fullName": "BaseKit.Com",
+							"screenName": "basekit",
+							"imageUrl": "http://placehold.it/98x98"
+			            }
+		        	]
+		        })|raw}}
+		    </div>
+		    <div class="column  columns-three-middle">
+				{{widget('contactform', 'contact', {
+					'text': 'Submit',
+					'formTitle': 'Contact Us',
+					'email': 'profile'
+				})|raw}}
+		    </div>
+		    <div class="column  columns-three-right">
+				{{widget('socialicons', 'socialnetworks', {
+					'googleplus': 'https://plus.google.com/101946323226233111530',
+					'linkedin':'http://www.linkedin.com/company/mycompanyname',
+					'facebook': 'https://www.facebook.com/mycompanyname',
+					'twitter': 'https://twitter.com/mycompanyname',
+					'youtube': 'https://www.youtube.com/user/mycompanyname',
+					'rss': 'http://news.bbc.co.uk/1/hi/help/rss/default.stm',
+					'pinterest': 'https://www.pinterest.com/mycompanyname',
+					'instagram': 'https://www.instagram.com/mycompanyname'
+				})|raw}}
+		    </div>
+		</div>
+
+
 		<!-- Row: Text Simple -->
 		<div class="row-options  row-bg--light  row-text--dark  row-alignment--left">
 			{% include "snippets/rows/row--text-simple/row--text-simple.twig" %}
@@ -55,7 +100,7 @@
 
 		<!-- Footer: Columns 3 -->
 		<div class="row-options  row-bg--light  row-text--dark  row-alignment--left">
-			{% include "snippets/footers/footer--columns-3/footer--columns-3.twig" %}
+			{% include "snippets/footers/footer--central/footer--central.twig" %}
 		</div>
 
 	</div>
