@@ -31,6 +31,24 @@
     @media @tablet {
         display: block; // Return to standard layout
     }
+
+
+    // Zone Content
+    .zone-content {
+        padding: @value__global-spacing--desktop;
+
+        @media @tablet {
+            padding: @value__global-spacing--tablet;
+        }
+        @media @mobile {
+            padding: @value__global-spacing--mobile;
+        }
+    }
+
+    // Content Container
+    .content-container {
+        max-width: 100%;
+    }
 }
 
 
@@ -45,7 +63,6 @@
     position: relative;
     min-width: @value__sidebar--width;
     max-width: @value__sidebar--width;
-    background-color: @color__sidebar--background;
 
     @media @tablet {
         max-width: 100%;

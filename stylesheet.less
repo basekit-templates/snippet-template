@@ -46,6 +46,7 @@
 @import "@{templateLocal}/snippets/footers/footer--columns-3/footer--columns-3.less";
 
 // Sidebars
+@import "@{templateLocal}/snippets/sidebars/sidebar.less";
 @import "@{templateLocal}/snippets/sidebars/sidebar--standard.less";
 
 // Navigation
@@ -129,32 +130,8 @@ h1, h2, h3, h4, p, a, span {
 }
 
 
-// Page: Standard / Default
-// ------------------------
-
-
-.page--standard,
-.page--default {
-
-    // .main-content {
-    //     padding: @value__global-spacing--desktop 0;
-
-    //     @media @tablet {
-    //         padding: @value__global-spacing--tablet 0;
-    //     }
-    //     @media @mobile {
-    //         padding: @value__global-spacing--mobile 0;
-    //     }
-    // }
-
-}
-
-
-// Page: Sidebar
-// -------------
-
-
-.page--sidebar .zone-content {
+// Page: Default
+.page--default .main-content {
     padding: @value__global-spacing--desktop 0;
 
     @media @tablet {

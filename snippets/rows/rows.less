@@ -55,7 +55,7 @@
 }
 
 
-// Remove styles when widget is in row
+// Reset styles when widget is in row or column
 .template-row,
 .responsivecolumns {
     .widget {
@@ -66,8 +66,11 @@
 
 
 // Removes spacing below a single widget
-.widget + .widget {
-    padding-bottom: 0;
+.widget + {
+    .responsivecolumns,
+    .widget {
+        padding-top: 0;
+    }
 }
 
 

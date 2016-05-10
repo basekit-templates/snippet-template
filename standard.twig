@@ -4,106 +4,59 @@
 
 <!-- Page Content -->
 <div class="page  page--standard">
-	<div class="bk-zone">
 
-		{% include "snippets/headers/header--standard/header--standard.twig" %}
-
-
-		<!-- Feature -->
-		<div class="feature-options  feature-height--medium  feature-alignment--middle-center  feature-overlay-type--box  feature-parallax--on">
-			{{widget('feature', 'feature', {
-			  'header': 'profile',
-			  'strapline': 'profile',
-			  'defaultBgImg': asset('images/feature-image1.jpg'),
-			  'positionTopPercentage': '100',
-			  'showBtn': true,
-			  'buttonText': 'Button'
-			})|raw}}
-		</div>
+	{% include "snippets/headers/header--standard/header--standard.twig" %}
 
 
-		<!-- Row: Twitter (Columns) -->
-		{{widget('contactform', 'contact', {
-			'text': 'Submit',
-			'formTitle': 'Contact Us',
-			'email': 'profile'
+	<!-- Feature -->
+	<div class="feature-options  feature-height--medium  feature-alignment--middle-center  feature-overlay-type--box  feature-parallax--on">
+		{{widget('feature', 'feature', {
+		  'header': 'profile',
+		  'strapline': 'profile',
+		  'defaultBgImg': asset('images/feature-image1.jpg'),
+		  'positionTopPercentage': '100',
+		  'showBtn': true,
+		  'buttonText': 'Button'
 		})|raw}}
-
-
-		<div class="responsivecolumns">
-			<div class="column  columns-three-left">
-				{{widget('twitter', 'twitter-feed', {
-		            "tweets": [
-			            {
-							"text": "How To Get Big-Brand Search Visibility",
-							"createdAt": "Thu Aug 01 11:30:49 +0000 2013",
-							"source": "<a href=\"http://www.tweetdeck.com\" rel=\"nofollow\">TweetDeck</a>",
-							"fullName": "BaseKit.Com",
-							"screenName": "basekit",
-							"imageUrl": "http://placehold.it/98x98"
-			            }
-		        	]
-		        })|raw}}
-		    </div>
-		    <div class="column  columns-three-middle">
-				{{widget('contactform', 'contact', {
-					'text': 'Submit',
-					'formTitle': 'Contact Us',
-					'email': 'profile'
-				})|raw}}
-		    </div>
-		    <div class="column  columns-three-right">
-				{{widget('socialicons', 'socialnetworks', {
-					'googleplus': 'https://plus.google.com/101946323226233111530',
-					'linkedin':'http://www.linkedin.com/company/mycompanyname',
-					'facebook': 'https://www.facebook.com/mycompanyname',
-					'twitter': 'https://twitter.com/mycompanyname',
-					'youtube': 'https://www.youtube.com/user/mycompanyname',
-					'rss': 'http://news.bbc.co.uk/1/hi/help/rss/default.stm',
-					'pinterest': 'https://www.pinterest.com/mycompanyname',
-					'instagram': 'https://www.instagram.com/mycompanyname'
-				})|raw}}
-		    </div>
-		</div>
-
-
-		<!-- Row: Text Simple -->
-		<div class="row-options  row-bg--light  row-text--dark  row-alignment--left">
-			{% include "snippets/rows/row--text-simple/row--text-simple.twig" %}
-		</div>
-
-		<!-- Row: Heading -->
-		<div class="row-options  row-bg--image  row-text--light  row-alignment--center">
-			{% include "snippets/rows/row--heading/row--heading.twig" %}
-		</div>
-
-		<!-- Row: Gallery -->
-		<div class="row-options  row-bg--light  row-text--dark  row-alignment--right  gallery-grid--3-columns">
-			{% include "snippets/rows/row--gallery/row--gallery.twig" %}
-		</div>
-
-		<!-- Row: 2 Columns -->
-		<div class="row-options  row-alignment--left">
-			{% include "snippets/rows/row--columns-2/row--columns-2.twig" %}
-		</div>
-
-		<!-- Row: Text Simple -->
-		<div class="row-options  row-bg--light  row-text--dark  row-alignment--right">
-			{% include "snippets/rows/row--text-simple/row--text-simple.twig" %}
-		</div>
-
-		<!-- Row: 3 Columns -->
-		<div class="row-options  row-bg--image  row-text--light  row-alignment--center">
-			{% include "snippets/rows/row--columns-3/row--columns-3.twig" %}
-		</div>
-
-
-		<!-- Footer: Columns 3 -->
-		<div class="row-options  row-bg--light  row-text--dark  row-alignment--left">
-			{% include "snippets/footers/footer--central/footer--central.twig" %}
-		</div>
-
 	</div>
+
+
+	<!-- Row: Text Simple -->
+	<div class="row-options  row-bg--light  row-text--dark  row-alignment--center">
+		{% include "snippets/rows/row--text-simple/row--text-simple.twig" %}
+	</div>
+
+	<!-- Row: Heading -->
+	<div class="row-options  row-bg--image  row-text--light  row-alignment--center">
+		{% include "snippets/rows/row--heading/row--heading.twig" %}
+	</div>
+
+	<!-- Row: Gallery -->
+	<div class="row-options  row-bg--light  row-text--dark  row-alignment--right  gallery-grid--3-columns">
+		{% include "snippets/rows/row--gallery/row--gallery.twig" %}
+	</div>
+
+	<!-- Row: 2 Columns -->
+	<div class="row-options  row-alignment--left">
+		{% include "snippets/rows/row--columns-2/row--columns-2.twig" %}
+	</div>
+
+	<!-- Row: 3 Columns -->
+	<div class="row-options  row-bg--image  row-text--light  row-alignment--center">
+		{% include "snippets/rows/row--columns-3/row--columns-3.twig" %}
+	</div>
+
+	<!-- Row: Text Simple -->
+	<div class="row-options  row-bg--light  row-text--dark  row-alignment--right">
+		{% include "snippets/rows/row--text-simple/row--text-simple.twig" %}
+	</div>
+
+
+	<!-- Footer: Columns 3 -->
+	<div class="row-options  row-bg--dark  row-text--light  row-alignment--center">
+		{% include "snippets/footers/footer--central/footer--central.twig" %}
+	</div>
+
 </div>
 
 {% endblock %}

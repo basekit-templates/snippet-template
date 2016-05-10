@@ -1,6 +1,7 @@
 {% extends "layout.twig" %}
 
 {% block content %}
+
 <!-- Page Content -->
 <div class="page  page--default">
 
@@ -15,6 +16,7 @@
 		</div>
 	</div>
 
+
 	<!-- Main Content -->
 	<div id="main-scroll" class="main-content">
 		<div class="content-container">
@@ -24,7 +26,10 @@
 	</div>
 
 
-	{% include "snippets/footers/footer--columns-3/footer--columns-3.twig" %}
+	<!-- Footer: Columns 3 -->
+	<div class="row-options  row-bg--light  row-text--dark  row-alignment--center">
+		{% include "snippets/footers/footer--central/footer--central.twig" %}
+	</div>
 
 
 </div>

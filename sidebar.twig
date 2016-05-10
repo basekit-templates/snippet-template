@@ -6,14 +6,17 @@
 <div class="page  page--sidebar">
 
 
-	{% include "snippets/sidebars/sidebar--standard.twig" %}
+	<!-- Sidebar (Left) -->
+	<div class="sidebar-options  sidebar-bg--light  sidebar-text--dark">
+		{% include "snippets/sidebars/sidebar--standard.twig" %}
+	</div>
 
 
 	<!-- Main Content -->
 	<div id="main-scroll" class="main-content">
 
 		<!-- Feature -->
-		<div class="feature-height--medium  feature-alignment--middle-center  feature-overlay-type--box  feature-parallax--on">
+		<div class="feature-options  feature-height--medium  feature-alignment--middle-center  feature-overlay-type--box  feature-parallax--on">
 			{{widget('feature', 'feature', {
 			  'header': 'profile',
 			  'strapline': 'profile',
