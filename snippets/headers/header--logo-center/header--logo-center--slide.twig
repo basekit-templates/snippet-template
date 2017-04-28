@@ -1,0 +1,23 @@
+
+<!-- Header Logo Center - Navigation Slide -->
+<header class="template-header  template-header--logo-center  navigation--icon">
+
+     <div class="template-container">
+
+        <!-- Profile -->
+        <div class="header-item  header-item--profile">
+            {{widget('profile', 'header-profile', { 'profileType':'email' })|raw}}
+        </div>
+
+        <!-- Logo & Company Name -->
+        <div class="header-item  header-item--logo-companyname">
+            {{widget('logo', 'header-logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'companyname', {"business": "profile" })|raw}}
+        </div>
+
+        <!-- Navigation -->
+        {% include "snippets/navigation/nav--slide/nav--slide.twig" %}
+
+    </div>
+
+</header>

@@ -1,0 +1,13 @@
+
+<!-- Header Standard - Navigation Slide -->
+<header class="template-header  template-header--standard  navigation--icon">
+    <div class="template-container">
+        <div class="header-item  header-item--brand">
+            {{widget('logo', 'header-logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'header-companyname', {"business": "profile" })|raw}}
+        </div>
+        <div class="header-item  header-item--navigation">
+            {% include "snippets/navigation/nav--slide/nav--slide.twig" %}
+        </div>
+    </div>
+</header>

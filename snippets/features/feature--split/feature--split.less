@@ -1,0 +1,112 @@
+
+// -------------------------------------
+// Snippet Template: Feature Split
+// -------------------------------------
+
+
+
+
+// Variables
+@template__container--width: 100%;
+@feature__split--height: 100vh;
+@feature__split--width: 50%;
+@feature__fullscreen--content-width: 650px;
+
+
+
+
+// Feature Styling
+// ------------------------------
+
+
+.template-feature--split {
+
+
+    // Sets header container width
+    .template-container {
+        max-width: @template__container--width;
+    }
+
+
+    // Add header colour if feature is hidden
+    .template-header,
+    [data-widget-type="feature"].bk-tpl-hidden + .template-header {
+        background: @color__header--background;
+        position: relative;
+
+        @media @tablet {
+
+            // Flex
+            .flex-display;
+            .align-items(flex-start);
+        }
+    }
+
+
+    // Position the header over the feature
+    [data-widget-type="feature"] + .template-header {
+        background: transparent;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+
+
+    // Feature Background
+    .feature__background-image {
+        background-repeat: repeat;
+        background-size: cover;
+        height: @feature__split--height;
+        margin-left: @feature__split--width;
+        max-width: @feature__split--width;
+
+        // Flex
+        .flex-display;
+        .align-items(center);
+        .justify-content(center);
+
+        @media @tablet {
+            margin-left: 0;
+            min-height: @feature__standard--height;
+            max-width: 100%;
+        }
+    }
+
+
+    // Feature Content - Headline / Strapline
+    .feature__content-wrap {
+        background: @color__feature-content--background;
+        max-width: @feature__split--width;
+        padding: 125px 40px 40px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        text-align: center;
+
+        // Flex
+        .flex-display;
+        .flex-basis(@feature__split--width);
+        .align-items(center);
+        .justify-content(center);
+
+        @media @tablet {
+            background: fade(@color__feature-content--background, 75%);
+            max-width: 100%;
+            padding: 40px;
+            top: initial;
+
+            // Flex
+            .align-items(flex-end);
+            .flex-basis(100%);
+        }
+    }
+
+
+    // Make headline and strapline a more readable length
+    .feature__content-inner-wrap {
+        max-width: @feature__fullscreen--content-width;
+    }
+}

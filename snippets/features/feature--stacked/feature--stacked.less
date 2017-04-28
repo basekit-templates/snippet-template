@@ -1,0 +1,91 @@
+
+// -------------------------------------
+// Snippet Template: Feature Test
+// -------------------------------------
+
+
+
+
+// Variables
+@template__container--width: 1200px;
+@feature__stacked--height: 100vh;
+@feature__stacked--width: 100%;
+@feature__stacked--content-width: 650px;
+
+
+
+
+// Feature Styling
+// ------------------------------
+
+.template-feature--test {
+
+
+    // Sets header container width
+    .template-container,
+    .feature__content-inner-wrap {
+        margin: 0 auto;
+        max-width: @template__container--width;
+        width: 100%;
+    }
+
+
+    // Header
+    .template-header {
+        background: @color__header--background;
+        position: relative;
+
+        @media @tablet {
+
+            // Flex
+            .flex-display;
+            .align-items(flex-start);
+        }
+    }
+
+
+    // Hide background image
+    .feature__background-image {
+        background-image: transparent !important;
+    }
+
+
+    // Make inline image visible
+    img {
+        display: block !important;
+        width: 100%;
+    }
+
+
+    // Feature Content - Headline / Strapline
+    .feature__content-wrap {
+        background: @color__feature-content--background;
+        max-width: @feature__stacked--width;
+        padding: 60px 30px;
+        text-align: left;
+
+        // Flex
+        .flex-display;
+        .flex-basis(@feature__stacked--width);
+        .align-items(flex-start);
+        .justify-content(flex-start);
+
+        @media @tablet {
+            padding: 40px;
+            top: initial;
+
+            // Flex
+            .align-items(flex-end);
+            .flex-basis(100%);
+            max-width: 100%;
+        }
+    }
+
+
+    // Make headline and strapline a more readable length
+    .feature__content-inner-wrap {
+        > * {
+            max-width: @feature__stacked--content-width;
+        }
+    }
+}

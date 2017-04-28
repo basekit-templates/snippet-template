@@ -1,0 +1,13 @@
+
+<!-- Sidebar - Standard -->
+<header class="template-header  template-header--sidebar">
+
+    <!-- Logo & Companyname -->
+    <div class="header-item  header-item--logo-companyname">
+        {{widget('logo', 'header-logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+        {{widget('companyname', 'companyname', {"business": "profile" })|raw}}
+    </div>
+
+    <!-- Navigation -->
+    {% include "snippets/navigation/nav--simple/nav--simple.twig" %}
+</header>

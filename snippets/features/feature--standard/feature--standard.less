@@ -1,0 +1,63 @@
+
+// -------------------------------------
+// Snippet Template: Feature Standard
+// -------------------------------------
+
+
+@feature__standard--height: 500px;
+@feature__standard--width: 1024px;
+@feature__standard--content-width: 650px;
+
+
+
+.template-feature--standard {
+
+
+    .template-header--standard {
+        background: transparent;
+
+        @media @tablet {
+
+            // Flex
+            .flex-display;
+            .align-items(flex-start);
+        }
+    }
+
+
+    .feature__background-image {
+        background-repeat: repeat;
+        background-size: cover;
+        margin: 0 auto;
+        padding: 40px;
+        position: relative;
+        height: @feature__standard--height;
+        width: @feature__standard--width;
+
+        // Flex
+        .flex-display;
+        .align-items(center);
+        .justify-content(center);
+
+        @media @tablet {
+            min-height: @feature__standard--height;
+        }
+    }
+
+
+    .feature__content-wrap {
+        background: fade(@color__feature-content--background, 40%);
+        padding: 30px;
+        text-align: center;
+
+        // Flex
+        .flex-display;
+        .align-items(center);
+        .justify-content(center);
+    }
+
+
+    .feature__content-inner-wrap {
+        max-width: @feature__standard--content-width;
+    }
+}

@@ -1,6 +1,13 @@
-<!-- Header: Align Logo on Top -->
+
+<!-- Header Logo on Top - Navigation Simple -->
 <header class="template-header  template-header--logo-on-top">
+
+    <!-- Logo -->
 	{{widget('logo', 'header-logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+
+    <!-- Companyname -->
 	{{widget('companyname', 'header-companyname', {"business": "profile" })|raw}}
+
+    <!-- Navigation -->
     {% include "snippets/navigation/nav--simple/nav--simple.twig" %}
 </header>

@@ -1,27 +1,19 @@
-<!-- Footer: Central -->
-<footer class="template-row  template-footer  template-footer--columns-3">
-    <div class="template-row-wrapper">
 
-        <div class="row">
-            <div class="footer-item  footer-item--left">
-                {{widget('content', 'footer-content1', { content: '
-                    <h4>Lorem Ipsum</h4>
-                    <p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                '})|raw}}
-            </div>
-        	<div class="footer-item  footer-item---middle">
-        		{{widget('content', 'footer-content2', { content: '
-                    <h4>Lorem Ipsum</h4>
-                    <p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                '})|raw}}
-        	</div>
-        	<div class="footer-item  footer-item--right">
-                {{widget('content', 'footer-content3', { content: '
-                    <h4>Lorem Ipsum</h4>
-                '})|raw}}
-                {{widget('profile', 'footer-profile1', { 'profileType':'socialicons' })|raw}}
-        	</div>
-        </div>
+<!-- Footer: Three Columns -->
+<footer class="template-row  template-footer  template-footer--columns-3">
+    <div class="template-container">
+
+        {{widget('content', 'footer-content', { content: '
+            <p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        '})|raw}}
+
+
+        {{widget('profile', 'footer-address', {
+            'profileType':'address'
+        })|raw}}
+
+
+        {{widget('profile', 'footer-social', { 'profileType':'socialicons' })|raw}}
 
     </div>
 </footer>

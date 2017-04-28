@@ -1,14 +1,12 @@
+
 // -----------------------------------
 // Snippet Template: Footer Column 2
 // -----------------------------------
 
 
-// In: 'Snippets > Footers > Footer Column 2'
 
-
+//  Layout
 // --------------------------------------
-
-//  *** LAYOUT INFO ***
 
 //  1. Column Left: Content & Profile
 //  2. Column Right: Content & Profile
@@ -16,22 +14,23 @@
 // --------------------------------------
 
 
+
 .template-footer--columns-2 {
     background-color: @color__footer--background;
 
 
 
-    // Row
+    // Template Container
     // -----------------------------
 
 
-    .row {
-        .flex-display;
+    .template-container {
+        padding: 30px 0;
+
+        // Flex
         .flex-wrap(wrap);
-        .align-items(center);
+        .align-items(flex-start);
         .justify-content(center);
-        margin-left: -@value__gutter-spacing;
-        margin-right: -@value__gutter-spacing;
     }
 
 
@@ -41,17 +40,16 @@
     // -----------------------------
 
 
-    .footer-item {
+    [data-widget-type] {
+        padding: 0 30px;
+
+        // Flex
         .flex-basis(50%);
-        padding: 0 @value__gutter-spacing;
+        .flex-grow(1);
 
         @media @tablet {
             .flex-basis(100%);
-            padding: 10px @value__gutter-spacing;
-        }
-
-        &--profile-last p {
-            padding-bottom: 0;
+            padding: 0 20px;
         }
     }
 
@@ -70,9 +68,11 @@
         margin: 20px 0;
     }
 
+
     // Form Group
     .form-group {
         margin: 0;
+
 
         &:first-child {
             .flex-display;
@@ -80,11 +80,13 @@
         }
     }
 
+
     // Input
     .input {
         min-height: 36px;
         margin-right: 10px;
     }
+
 
     // Label
     .label {
@@ -99,6 +101,7 @@
         padding-bottom: 10px;
     }
 
+
     // Address
     .address-line {
         display: inline-block;
@@ -107,11 +110,14 @@
             padding-bottom: 0;
         }
 
+
         &:after {
             position: relative;
             left: -4px;
             content: ",";
         }
+
+
         &:last-child:after {
             display: none;
         }

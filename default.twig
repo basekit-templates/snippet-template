@@ -5,32 +5,7 @@
 <!-- Page Content -->
 <div class="page  page--default">
 
-
-	{% include "snippets/headers/header--standard/header--standard.twig" %}
-
-
-	<!-- Page Title -->
-	<div class="page-title">
-		<div class="content-container">
-			<h3>{{ page.title }}</h3>
-		</div>
-	</div>
-
-
-	<!-- Main Content -->
-	<div id="main-scroll" class="main-content">
-		<div class="content-container">
-				{{zone('main')|raw}}
-			</div>
-		</div>
-	</div>
-
-
-	<!-- Footer: Columns 3 -->
-	<div class="row-options  row-bg--light  row-text--dark  row-alignment--center">
-		{% include "snippets/footers/footer--central/footer--central.twig" %}
-	</div>
-
+    {% include "snippets/features/feature__slideshow--fullscreen/feature__slideshow--fullscreen.twig" %}
 
 </div>
 

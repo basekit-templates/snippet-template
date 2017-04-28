@@ -1,21 +1,16 @@
+
 // ---------------------------------------
-// DIFM Template: Navigation Toggle JS
+// Navigation Toggle JS
 // ---------------------------------------
 
 
 // Toggles class open to display/hide the whole navigation
-$( ".extendednavigation" ).addClass( "closed" );
-
 $( ".navigation-toggle" ).click(function() {
-    $( ".extendednavigation" ).toggleClass( "open" ).toggleClass( "closed" );
+    $( ".template-navigation" ).toggleClass( "navigation-open" );
 });
 
 
-// Togglse class open to display/hide folders
-$( ".navigation-item.folder .item-name--parent" ).each(function() {
-    $( this ).click(function() {
-            $( this ).parent( ".navigation-item.folder" ).toggleClass( "open" );
-    });
+// Custom Toggle
+$(document).on("click", ".navigation-icon--container input", function() {
+    $( ".template-navigation" ).toggleClass( "navigation-open" );
 });
-
-

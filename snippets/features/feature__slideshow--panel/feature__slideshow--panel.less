@@ -1,0 +1,350 @@
+
+// -----------------------------------------------
+// Snippet Template: Feature Slideshow Panel
+// -----------------------------------------------
+
+
+
+
+// Variables
+@template__container--width: 100%;
+@slideshow__fullscreen--height: 100vh;
+@slideshow__standard--width: 1140px;
+@slideshow__fullscreen--content-width: 650px;
+
+
+
+
+// Slideshow Styling
+// ------------------------------
+
+
+.template-feature__slideshow--fullscreen {
+
+
+    // Sets header container width
+    .template-container {
+        max-width: @template__container--width;
+    }
+
+
+    // Add header colour if feature is hidden
+    .template-header,
+    [data-widget-type="responsiveslideshow"].bk-tpl-hidden + .template-header {
+        background: @color__header--background;
+        position: relative;
+
+        @media @tablet {
+
+            // Flex
+            .flex-display;
+            .align-items(flex-start);
+        }
+    }
+
+
+    // Position the header over the feature
+    [data-widget-type="responsiveslideshow"] + .template-header {
+        background: transparent;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 3;
+    }
+
+
+    .responsiveslideshow {
+
+
+        //  Slideshow Background Image
+        // -----------------------------
+
+        &__figure {
+            background-repeat: no-repeat;
+            background-size: cover!important;
+            height: @slideshow__fullscreen--height;
+            position: initial;
+
+            // Flex
+            .flex-display;
+            .align-items(center);
+            .justify-content(center);
+
+            @media @tablet {
+                min-height: @slideshow__fullscreen--height;
+            }
+
+
+            // Slide background overlay
+            &:after {
+                background-color: fade(@color__slideshow--background, 20%);
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+        }
+
+
+
+        //  Caption - Headline & Strapline
+        // ---------------------------------
+
+        &__caption {
+            background: @color__slideshow-caption--background;
+            margin-left: 65px;
+            max-width: 600px;
+            padding: 40px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            text-align: center;
+            z-index: 1;
+
+            // Flex
+            .flex-display;
+            .flex-direction(column);
+            .align-items(center);
+            .justify-content(center);
+        }
+
+
+        // Slideshow Title
+        &__image-title {
+            color: @color__slideshow-title--text;
+            font-family: @font__feature-headline--font-family;
+            font-size: @font__feature-headline--font-size;
+            font-weight: @font__feature-headline--font-weight;
+            letter-spacing: @font__feature-headline--letter-spacing;
+            line-height: @font__feature-headline--line-height;
+        }
+
+
+        // Slideshow Description
+        &__image-description {
+            color: @color__slideshow-description--text;
+            font-family: @font__feature-strapline--font-family;
+            font-size: @font__feature-strapline--font-size;
+            font-weight: @font__feature-strapline--font-weight;
+            letter-spacing: @font__feature-strapline--letter-spacing;
+            line-height: @font__feature-strapline--line-height;
+        }
+
+
+        &__image-title + &__image-description {
+            padding-top: 10px;
+        }
+
+
+
+        //  Navigation & Pagination
+        // -----------------------------
+
+        &__slide-pagination,
+        &__slide-navigation {
+            margin: 0;
+            position: absolute;
+
+            // Flex
+            .flex-display;
+            .align-items(center);
+            .align-content(center);
+        }
+
+
+        // Navigation positioning
+        &__slide-navigation {
+            max-width: 65px;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 2;
+
+            // Flex
+            .flex-direction(column);
+            .justify-content(flex-end);
+
+            @media @mobile {
+                top: initial;
+            }
+        }
+
+
+        // Navigation buttons
+        &__previous-button,
+        &__next-button,
+        &__pause-toggle {
+            background-color: transparent;
+            color: white;
+            display: block;
+            padding: 0;
+            position: relative;
+            height: 25px;
+            width: 60px;
+
+             @media @mobile {
+                width: 50px;
+            }
+        }
+
+
+        &__previous-button,
+        &__next-button {
+            .transform(rotate(90deg));
+        }
+
+
+        // Previous slide button
+        &__previous-button {
+            .transition(left 0.5s ease-in-out);
+
+            @media @mobile {
+                position: absolute;
+                right: 40px;
+                bottom: 25px;
+            }
+
+
+            // Previous Icon
+            &:before {
+                background-image: image('/snippets/features/feature__slideshow--fullscreen/assets/slideshow--previous.svg');
+                background-size: 26px;
+                content: "";
+                display: inline-block;
+                margin: 0 auto;
+                position: relative;
+                height: 26px;
+                width: 26px;
+            }
+        }
+
+
+        // Pause / Play toggle button
+        &__pause-toggle {
+            height: 50px;
+            padding: 0;
+            position: absolute;
+            bottom: 5px;
+
+            // Flex
+            .flex-display;
+            .align-items(center);
+
+
+            // Play Icon
+            &.pause:before {
+                background-image: image('/snippets/features/feature__slideshow--fullscreen/assets/slideshow--play.svg');
+                background-size: 20px;
+                content: "";
+                display: inline-block;
+                margin: 0 auto;
+                position: relative;
+                height: 25px;
+                width: 20px;
+            }
+
+
+            // Pause Icon
+            &.play:before {
+                background-image: image('/snippets/features/feature__slideshow--fullscreen/assets/slideshow--pause.svg');
+                background-size: 20px;
+                content: "";
+                display: inline-block;
+                margin: 0 auto;
+                position: relative;
+                height: 25px;
+                width: 20px;
+            }
+        }
+
+
+        // Next slide button
+        &__next-button {
+            .transition(right 0.5s ease-in-out);
+
+            @media @mobile {
+                position: absolute;
+                right: 0;
+                bottom: 25px;
+            }
+
+
+            // Next Button
+            &:after {
+                background-image: image('/snippets/features/feature__slideshow--fullscreen/assets/slideshow--next.svg');
+                background-size: 26px;
+                content: "";
+                display: inline-block;
+                margin: 0 auto;
+                position: relative;
+                height: 26px;
+                width: 26px;
+            }
+        }
+
+
+        // Button icon transition
+        &__previous-button:before,
+        &__pause-toggle:before,
+        &__pause-toggle:after,
+        &__next-button:after {
+            background-repeat: no-repeat;
+            margin: 0;
+            will-change: transition;
+        }
+
+
+        // Hide navigation control text
+        &__control-text {
+            display: none;
+            visibility: hidden;
+        }
+
+
+        // Slide pagination
+        &__slide-pagination {
+            top: 0;
+            bottom: 0;
+            .justify-content(center);
+            z-index: 3;
+
+            @media @mobile {
+                display: none;
+                visibility: hidden;
+            }
+        }
+
+
+        // Pagination list item
+        &__pagination-item {
+            display: inline-block;
+            padding: 0 2px 0;
+
+
+            // Pagination selected state
+            &.selected .button {
+                background-color: @color__slideshow-pagination-item--background;
+                border: none;
+            }
+        }
+
+
+        // Pagination button styles
+        &__button {
+            background-color: transparent;
+            border: 2px solid @color__slideshow-pagination-item--background;
+            .border-radius(100px);
+            line-height: 0;
+            overflow: hidden;
+            padding: 0;
+            text-indent: -9999px;
+            height: 12px;
+            width: 12px;
+        }
+    }
+}

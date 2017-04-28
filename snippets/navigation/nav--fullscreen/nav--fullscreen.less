@@ -1,67 +1,57 @@
-// -------------------------------------
+
+// ---------------------------------------
 // Snippet Template: Fullscreen Navigation
-// -------------------------------------
+// ---------------------------------------
 
-
-// In: 'Snippets > Navigation > Navigation Fullscreen'
 
 
 
 // ------------------------------
-// #Template Navigation
+//  Template Navigation
 // ------------------------------
 
 
 .template-navigation--fullscreen {
+    .flex-display;
+    .align-items(center);
+    .justify-content(flex-end);
 
 
-    // Navigation Overlay
+
+    // Navigation Body (Overlay)
     // ------------------------------
 
 
-    .extendednavigation:after {
+    // Closed
+    .navigation-body {
+        background-color: @color__navigation--background;
         content: "";
+        display: block;
+        opacity: 0;
         position: fixed;
-        z-index: 10009;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-        display: block;
-        height: 0;
-        background-color: @color__button--background;
-        opacity: 0;
-        .transition(all 0.5s ease);
-    }
-
-    // Open
-    .extendednavigation.open:after {
-        height: auto;
-        opacity: 1;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+        visibility: hidden;
+        z-index: 0;
     }
 
 
-
-
-    // Navigation Body
-    // ------------------------------
-
-
     // Open
-    .open .navigation-body {
+    &.navigation-open .navigation-body {
         display: block;
-        z-index: 10010;
         opacity: 1;
-        width: auto;
         overflow: auto;
-        position: fixed;
         right:0;
         top: 0;
         bottom: 0;
         left: 0;
-        height: 100%;
-        opacity: 1;
-        .transition(all 0.5s ease);
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+        width: auto;
+        visibility: visible;
+        z-index: 999;
     }
 
 
@@ -70,26 +60,27 @@
     // ------------------------------
 
 
+    // Closed
     .navigation-list {
+        background-color: @color__navigation-list--background;
         margin: 0;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
 
-        // Hides at tablet
-        @media @tablet {
-            display: none;
-            text-align: center;
-        }
+        // Flex
+        .flex-display;
+        .flex-direction(column);
+        .justify-content(center);
     }
+
 
     // Open
-    .open {
-        .navigation-list:not(.navigation-list--children) {
-            .flex-display;
-            .flex-direction(column);
-            .justify-content(center);
-            height: 100%;
-        }
+    &.navigation-open .navigation-list:not(.navigation-list--children) {
+        height: 100%;
+        opacity: 1;
+        visibility: visible;
     }
-
 
 
 
@@ -103,18 +94,11 @@
             display: block;
         }
 
-        // Selected
-        &.selected .item-name {
-            color: @color__navigation--text--hover;
 
-            @media @tablet {
-                color: white;
-            }
+        &:hover .navigation-list--children {
+            display: none;
         }
-
-
     }
-
 
 
 
@@ -122,17 +106,30 @@
     // ------------------------------
 
 
-    .navigation-item .item-name {
-        padding: 0 0 0 30px;
+    .navigation-item {
 
-        @media @tablet {
+
+        .item-name {
+            color: @color__navigation--text;
+            font-size: @font__navigation--font-size;
+            line-height: @font__navigation--line-height;
             padding: 10px 0;
-            font-size: @font__navigation--font-size * 1.2;
-            line-height: @font__navigation--line-height * 1.2;
-            color: lighten(@color__navigation--text--hover, 35%);
+
+            @media @mobile {
+                padding: 6px 0;
+            }
         }
-        @media @mobile {
-            padding: 6px 0;
+
+
+        // Selected / Hover / Active State
+        &.selected .item-name,
+        &:hover .item-name,
+        &:focus .item-name {
+            color: @color__navigation--text--hover;
+
+            @media @tablet {
+                color: @color__navigation--text--hover;
+            }
         }
     }
 
@@ -145,52 +142,44 @@
 
     // Dropdown Arrow
     .item-name--parent:after {
-        display: inline-block;
-        vertical-align: middle;
-        content: "";
-        margin-left: 4px;
         border: 5px solid transparent;
         border-top-color: @color__navigation--text;
-
-        @media @tablet {
-            border-top-color: white;
-        }
+        content: "";
+        display: inline-block;
+        margin-left: 6px;
+        vertical-align: middle;
     }
 
 
     // Dropdown Menu List
     .navigation-list--children {
-        position: absolute;
-        z-index: 10000;
-        min-width: 150px;
+        background-color: @color__navigation-item--background;
+        display: block;
+        opacity: 0;
         overflow: hidden;
-        .transition(opacity 0.5s ease-in-out);
-        white-space: inherit;
+        height: 0;
+        position: relative;
+        transition: opacity 0.35s ease, visibility 0.35s ease;
+        visibility: hidden;
 
-        // Hide until click (JS)
-        @media @tablet {
-            position: relative;
-            display: none;
-            height: 0;
-            opacity: 0;
-            background-color: darken(@color__button--background, 8%);
-        }
 
-        .navigation-item--child {
-            padding: 0 10px;
-        }
-
+        // Dropdown Item Link
         .item-name {
-            padding: 4px 10px;
+            padding: 10px 15px;
         }
     }
 
-    // Nav Open
-    .navigation-item.folder.open .navigation-list--children {
+
+    // Dropdown Menu - Open
+    .navigation-item.folder-open .navigation-list--children {
         display: block;
-        opacity: 1;
         height: auto;
+        margin: 0 auto;
+        opacity: 1;
         padding: 10px 0;
+        width: auto;
+        transition: opacity 0.35s ease, visibility 0.35s ease;
+        visibility: visible;
 
         @media @mobile {
             padding: 0;
@@ -200,80 +189,12 @@
 
 
 
-    // Toggle Button
+    //  Navigation Toggle Button
     // ------------------------------
 
 
     .navigation-toggle {
         display: none;
-
-        // Middle Bar
-        width: 50px;
-        height: 38px;
-        margin: 0;
-        padding: 18px 0 18px 25px;
-        background-color: black;
-        background-clip: content-box;
-        border: none;
-        outline: none;
-        .transition(background-color 0.5s ease-in);
-        text-indent: -9999px;
-
-        @media @tablet {
-            position: absolute;
-            z-index: 99999;
-            top: -52px;
-            right: 0;
-            display: block;
-        }
-        @media @mobile {
-            position: relative;
-            top: 0;
-            margin-left: auto;
-        }
-
-        // Top & Bottom Bar
-        &:after,
-        &:before {
-            position: absolute;
-            content: "";
-            display: block;
-            height: 2px;
-            width: 30px;
-            right: 0;
-            margin-right: 0;
-            margin-left: 0;
-            background-color: black;
-            .transition(all 0.35s ease-in-out);
-        }
-
-        // Top bar
-        &:before {
-            top: 9px;
-        }
-
-        // Bottom bar
-        &:after {
-            bottom: 9px;
-        }
+        visibility: hidden;
     }
-
-    // Open
-    .open .navigation-toggle {
-        background-color: transparent;
-        .transition(background-color 0s ease-out);
-        z-index: 100000;
-
-        &:before {
-            top: 19px;
-            .transform(rotate(45deg));
-            background-color: white;
-        }
-        &:after {
-            bottom: 17px;
-            .transform(rotate(-45deg));
-            background-color: white;
-        }
-    }
-
 }

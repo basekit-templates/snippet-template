@@ -1,10 +1,13 @@
-<!-- Header: Standard -->
+
+<!-- Header Standard - Navigation Simple -->
 <header class="template-header  template-header--standard">
-	<div class="header-item  header-item--logo-companyname">
-		{{widget('logo', 'header-logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-		{{widget('companyname', 'header-companyname', {"business": "profile" })|raw}}
-	</div>
-	<div class="header-item  header-item--navigation">
-        {% include "snippets/navigation/nav--simple/nav--simple.twig" %}
-	</div>
+    <div class="template-container">
+    	<div class="header-item  header-item--brand">
+    		{{widget('logo', 'header-logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+    		{{widget('companyname', 'header-companyname', {"business": "profile" })|raw}}
+    	</div>
+    	<div class="header-item  header-item--navigation">
+            {% include "snippets/navigation/nav--simple/nav--simple.twig" %}
+    	</div>
+    </div>
 </header>

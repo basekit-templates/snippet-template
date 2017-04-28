@@ -1,3 +1,4 @@
-<nav class="template-navigation  template-navigation--fullscreen">
+<div class="header-item  template-navigation  template-navigation--fullscreen">
     {{widget('extendednavigation', 'navigation', {"align":"right"})|raw}}
-</nav>
+    {% include "snippets/navigation/navigation-toggle.twig" %}
+</div>

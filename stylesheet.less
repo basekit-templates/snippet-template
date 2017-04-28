@@ -7,8 +7,7 @@
     display: none!important;
 }
 
-@templateCommon: "../../templates/common/";
-@templateLocal: "";
+
 
 
 // -----------------------------
@@ -23,49 +22,58 @@
 @import "@{templateCommon}/bk-less-framework.less";  // Framework
 @import "@{templateLocal}/less/mixins.less";         // Mixins
 @import "@{templateLocal}/less/variables.less";      // Variables
-// @import "@{templateLocal}/less/validation.less";     // Validation
+
 
 
 // #Snippet Imports
 // -----------------------------
 
 
-// Note: Delete any unused import files and includes below.
-
-
 // Headers
 @import "@{templateLocal}/snippets/headers/header--standard/header--standard.less";
-@import "@{templateLocal}/snippets/headers/header--standard-basket/header--standard-basket.less";
-@import "@{templateLocal}/snippets/headers/header--standard-reverse/header--standard-reverse.less";
-@import "@{templateLocal}/snippets/headers/header--logo-on-top/header--logo-on-top.less";
+@import "@{templateLocal}/snippets/headers/header--standard/header--standard-fullscreen.less";
+@import "@{templateLocal}/snippets/headers/header--logo-top/header--logo-top.less";
 @import "@{templateLocal}/snippets/headers/header--logo-center/header--logo-center.less";
+@import "@{templateLocal}/snippets/headers/header--sidebar/header--sidebar.less";
+
+
+// Features
+@import "@{templateLocal}/snippets/features/feature--standard/feature--standard.less";
+@import "@{templateLocal}/snippets/features/feature--fullscreen/feature--fullscreen.less";
+@import "@{templateLocal}/snippets/features/feature--split/feature--split.less";
+@import "@{templateLocal}/snippets/features/feature--test/feature--test.less";
+
+@import "@{templateLocal}/snippets/features/feature__slideshow--fullscreen/feature__slideshow--fullscreen.less";
+@import "@{templateLocal}/snippets/features/feature__slideshow--standard/feature__slideshow--standard.less";
+
 
 // Footers
 @import "@{templateLocal}/snippets/footers/footer--central/footer--central.less";
+@import "@{templateLocal}/snippets/footers/footer--signup/footer--signup.less";
 @import "@{templateLocal}/snippets/footers/footer--columns-2/footer--columns-2.less";
 @import "@{templateLocal}/snippets/footers/footer--columns-3/footer--columns-3.less";
 
-// Sidebars
-@import "@{templateLocal}/snippets/sidebars/sidebar.less";
-@import "@{templateLocal}/snippets/sidebars/sidebar--standard.less";
 
 // Navigation
+@import "@{templateLocal}/snippets/navigation/navigation-toggle.less";
 @import "@{templateLocal}/snippets/navigation/nav--simple/nav--simple.less";
 @import "@{templateLocal}/snippets/navigation/nav--sidebar/nav--sidebar.less";
 @import "@{templateLocal}/snippets/navigation/nav--fullscreen/nav--fullscreen.less";
-@import "@{templateLocal}/snippets/navigation/nav--fullscreen-closed/nav--fullscreen-closed.less";
+@import "@{templateLocal}/snippets/navigation/nav--slide/nav--slide.less";
+
 
 // Rows
-@import "@{templateLocal}/snippets/rows/rows.less";
-@import "@{templateLocal}/snippets/rows/row--text-simple/row--text-simple.less";
-@import "@{templateLocal}/snippets/rows/row--heading/row--heading.less";
-@import "@{templateLocal}/snippets/rows/row--gallery/row--gallery.less";
-@import "@{templateLocal}/snippets/rows/row--columns-2/row--columns-2.less";
-@import "@{templateLocal}/snippets/rows/row--columns-3/row--columns-3.less";
+// @import "@{templateLocal}/snippets/rows/rows.less";
+// @import "@{templateLocal}/snippets/rows/row--text-simple/row--text-simple.less";
+// @import "@{templateLocal}/snippets/rows/row--heading/row--heading.less";
+// @import "@{templateLocal}/snippets/rows/row--gallery/row--gallery.less";
+// @import "@{templateLocal}/snippets/rows/row--columns-2/row--columns-2.less";
+// @import "@{templateLocal}/snippets/rows/row--columns-3/row--columns-3.less";
+
 
 // Widgets
-@import "@{templateLocal}/widgets/feature.less";
-@import "@{templateLocal}/widgets/twitter-feed.less";
+// @import "@{templateLocal}/widgets/feature.less";
+// @import "@{templateLocal}/widgets/twitter-feed.less";
 
 
 
@@ -76,19 +84,18 @@
 
 
 body {
-    height: 100%;
     background-color: @color__body--background;
+    height: 100%;
 }
 
 
 // Site Container
 .site-container {
-    width: 100%;
-    max-width: @value__site-container--width;
+    background-color: @color__container--background;
     height: 100%;
     margin: 0 auto;
-    background-color: @color__container--background;
-    overflow: hidden;
+    max-width: @value__site-container--width;
+    width: 100%;
 
     @media @tablet {
         max-width: 100%;
@@ -96,14 +103,13 @@ body {
 }
 
 // Content Container
-.content-container {
-    width: 100%;
-    max-width: @value__content-container--width;
+.template-container {
+    max-width: 1280px;
     margin: 0 auto;
+    width: 100%;
 
-    @media @tablet {
-        width: 90%;
-    }
+    // Flex
+    .flex-display;
 }
 
 
@@ -139,23 +145,5 @@ h1, h2, h3, h4, p, a, span {
     }
     @media @mobile {
         padding: @value__global-spacing--mobile 0;
-    }
-}
-
-
-
-
-// ------------------------------
-// Page Styles
-// ------------------------------
-
-
-.page-title {
-    padding: 10px 0;
-    background-color: #eee;
-
-    // Removes heading padding
-    * {
-        padding-bottom: 0;
     }
 }

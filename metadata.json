@@ -3,7 +3,7 @@
     "widgetVersion": 2,
     "thumbnail":"thumbnail.png",
     "templateType":"standard",
-    "pageTypes": [ "standard", "sidebar", "gallery", "video" ],
+    "pageTypes": [ "standard"],
     "screenshot":"screenshot.jpg",
     "colorSwatches":
     {
@@ -52,18 +52,18 @@
             "letter-spacing": "inherit"
         },
         "font5": {
-            "font-family": "\"Merriweather\", Georgia, serif",
-            "font-size": "14px",
+            "font-family": "\"Work Sans\", Geneva, Tahoma, sans-serif",
+            "font-size": "16px",
             "font-weight": "400",
             "line-height": "28px",
             "color": "@color-swatch5",
             "letter-spacing": "inherit"
         },
         "font6": {
-            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
-            "font-size": "14px",
+            "font-family": "\"Work Sans\", Geneva, Tahoma, sans-serif",
+            "font-size": "16px",
             "font-weight": "400",
-            "line-height": "32px",
+            "line-height": "24px",
             "color": "@color-swatch6",
             "color-hover": "@color-swatch3",
             "letter-spacing": "inherit",
@@ -71,8 +71,8 @@
             "background-color-hover": "@color-swatch1"
         },
         "font7": {
-            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
-            "font-size": "14px",
+            "font-family": "\"Work Sans\", Geneva, Tahoma, sans-seriff",
+            "font-size": "16px",
             "font-weight": "400",
             "line-height": "30px",
             "color": "@color-swatch1",
@@ -90,7 +90,7 @@
         },
         "font9": {
             "font-family": "\"Merriweather\", Georgia, serif",
-            "font-size": "15px",
+            "font-size": "16px",
             "font-weight": "400",
             "line-height": "28px",
             "color": "@color-swatch1",
@@ -103,6 +103,60 @@
             "line-height": "28px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
+        }
+    },
+    "styles": {
+        "colors": {
+            "color__primary": "#1b1a1a",
+            "color__secondary": "#304d84"
+        },
+        "site": {
+            "color__body--background": "#f5f5f5",
+            "color__container--background": "#ffffff",
+            "color__link--text": "@color__seconary",
+            "color__companyname--text": "@color__primary"
+        },
+        "header": {
+            "color__header--background": "white",
+            "color__header--border": "transparent"
+        },
+        "navigation": {
+            "color__navigation--background":"#ffffff",
+            "color__navigation--border":"transparent",
+            "color__navigation--text":"@color__primary",
+            "color__navigation--text--hover":"@color__secondary",
+            "color__navigation--text--selected":"@color__secondary",
+            "color__navigation-list--background":"#ffffff",
+            "color__navigation-item--text":"@color__secondary",
+            "color__navigation-item--text--selected":"@color__secondary",
+            "color__navigation-item--selected":"@color__secondary",
+            "color__navigation-item--background":"darken(@color__navigation--background, 5%)",
+            "color__navigation-item--background--hover":"@color__secondary",
+            "color__navigation-item--background--selected":"@color__secondary",
+
+            "font__navigation--font-family": "@font-swatch6-font-family",
+            "font__navigation--font-size": "@font-swatch6-font-size",
+            "font__navigation--font-weight": "@font-swatch6-font-weight",
+            "font__navigation--line-height": "@font-swatch6-line-height",
+            "font__navigation--letter-spacing": "@font-swatch6-letter-spacing"
+        },
+        "slideshow": {
+            "color__slideshow--background": "@color__primary",
+            "color__slideshow-caption--background": "transparent",
+            "color__slideshow-pagination-item--background": "#ffffff",
+            "color__slideshow-pagination-item--text": "#ffffff",
+
+            "font__feature-headline--font-family": "@font-swatch1-font-family",
+            "font__feature-headline--font-size": "@font-swatch1-font-size",
+            "font__feature-headline--font-weight": "@font-swatch1-font-weight",
+            "font__feature-headline--letter-spacing": "@font-swatch1-letter-spacing",
+            "font__feature-headline--line-height": "@font-swatch1-line-height",
+
+            "font__feature-strapline--font-family": "@font-swatch2-font-family",
+            "font__feature-strapline--font-size": "@font-swatch2-font-size",
+            "font__feature-strapline--font-weight": "@font-swatch2-font-weight",
+            "font__feature-strapline--letter-spacing": "@font-swatch2-letter-spacing",
+            "font__feature-strapline--line-height": "@font-swatch2-line-height"
         }
     }
 }

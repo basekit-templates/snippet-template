@@ -1,0 +1,252 @@
+
+// -------------------------------------
+// Snippet Template: Fullscreen Navigation
+// -------------------------------------
+
+
+
+// ------------------------------
+// #Template Navigation
+// ------------------------------
+
+
+.template-navigation--slide-right {
+    .flex-display;
+    .align-items(center);
+    .justify-content(flex-end);
+
+
+    // Closed
+    [data-widget-type="extendednavigation"] {
+        background-color: @color__navigation--background;
+        overflow-y: scroll;
+        padding: 100px 35px 0;
+        pointer-events: all;
+        position: fixed;
+        top: 0;
+        right: -100vw;
+        bottom: 0;
+        min-width: 25vw;
+        max-width: 65vw;
+        .transition(right 0.5s ease);
+        z-index: 1;
+
+        // Flex
+        .flex-display;
+        .align-items(center);
+        .justify-content(flex-start);
+
+
+        @media @tablet {
+            min-width: 65vw;
+            max-width: 90vw;
+        }
+    }
+
+
+    // Open
+    &.navigation-open [data-widget-type="extendednavigation"] {
+        right: 0;
+        width: auto;
+    }
+
+
+    // So navigation aligns correctly
+    .extendednavigation {
+        width: 100%;
+    }
+
+
+
+    // Navigation List
+    // ------------------------------
+
+
+    .navigation-list {
+        background-color: @color__navigation-list--background;
+        margin: 0;
+
+        // Flex
+        .flex-display;
+        .flex-direction(column);
+        .justify-content(center);
+    }
+
+
+
+    // Navigation Item
+    // ------------------------------
+
+
+    .navigation-item {
+        right: -100vw;
+        .transition(right 0.5s ease-in-out);
+        will-transform: transition;
+
+
+        &:hover .navigation-list--children {
+            opacity: 0;
+            height: 0;
+            visibility: hidden;
+        }
+    }
+
+
+    &.navigation-open .navigation-item {
+        right: 0;
+
+
+        // Delays navigation items incrementally
+        &:first-child {
+            transition-delay: 0.1s;
+        }
+
+
+        &:nth-child(n+1) {
+            transition-delay: 0.15s;
+        }
+
+
+        &:nth-child(n+2) {
+            transition-delay: 0.25s;
+        }
+
+
+        &:nth-child(n+3) {
+            transition-delay: 0.35s;
+        }
+
+
+        &:nth-child(n+4) {
+            transition-delay: 0.45s;
+        }
+
+
+        &:nth-child(n+5) {
+            transition-delay: 0.55s;
+        }
+
+
+        &:nth-child(n+6) {
+            transition-delay: 0.65s;
+        }
+
+
+        &:nth-child(n+7) {
+            transition-delay: 0.75s;
+        }
+
+
+        &:nth-child(n+8) {
+            transition-delay: 0.85s;
+        }
+
+
+        &:nth-child(n+9) {
+            transition-delay: 0.95s;
+        }
+
+
+        &:nth-child(n+10) > {
+            transition-delay: 1.05s;
+        }
+    }
+
+
+
+    // Navigation Link
+    // ------------------------------
+
+
+    .navigation-item {
+
+
+        .item-name {
+            color: @color__navigation--text;
+            font-size: @font__navigation--font-size;
+            line-height: @font__navigation--line-height;
+            padding: 10px 0;
+
+            @media @mobile {
+                padding: 6px 0;
+            }
+        }
+
+
+        // Selected / Hover / Active State
+        &.selected .item-name,
+        &:hover .item-name,
+        &:focus .item-name {
+            color: @color__navigation--text--hover;
+
+            @media @tablet {
+                color: @color__navigation--text--hover;
+            }
+        }
+    }
+
+
+
+
+    // Dropdown Menu
+    // ------------------------------
+
+
+    // Dropdown Arrow
+    .item-name--parent:after {
+        border: 5px solid transparent;
+        border-top-color: @color__navigation--text;
+        content: "";
+        display: inline-block;
+        margin-left: 6px;
+        vertical-align: middle;
+    }
+
+
+    // Dropdown Menu List
+    .navigation-list--children {
+        background-color: @color__navigation-item--background;
+        display: block;
+        opacity: 0;
+        overflow: hidden;
+        height: 0;
+        position: relative;
+        transition: opacity 0.35s ease, visibility 0.35s ease;
+        visibility: hidden;
+
+
+        // Dropdown Item Link
+        .item-name {
+            padding: 10px 15px;
+        }
+    }
+
+
+    // Dropdown Menu - Open
+    .navigation-item.folder-open .navigation-list--children {
+        display: block;
+        height: auto;
+        margin: 0 auto;
+        opacity: 1;
+        padding: 10px 0;
+        width: auto;
+        transition: opacity 0.35s ease, visibility 0.35s ease;
+        visibility: visible;
+
+        @media @mobile {
+            padding: 0;
+        }
+    }
+
+
+
+
+    //  Navigation Toggle Button
+    // ------------------------------
+
+
+    .navigation-toggle {
+        display: none;
+        visibility: hidden;
+    }
+}

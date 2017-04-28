@@ -1,0 +1,19 @@
+<div class="template-feature  template-feature__slideshow--panel">
+
+    {{widget('responsiveslideshow', 'slideshow', {
+        'showButtons': true,
+        'showBullets': false,
+        'allowPause': true,
+        'allowLoop': false,
+    'images':[
+        {
+            'url':'http://placehold.it/350x300',
+            'title':'First slide title',
+            'description': 'First slide description'
+        }
+    ]
+    })|raw}}
+
+    {% include "snippets/headers/header--standard/header--standard--fullscreen.twig" %}
+
+</div>

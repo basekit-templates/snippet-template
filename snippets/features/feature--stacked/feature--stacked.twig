@@ -1,0 +1,17 @@
+<div class="template-feature  template-feature--test">
+
+    {% include "snippets/headers/header--standard/header--standard.twig" %}
+
+    {{widget('feature', 'template-feature--standard', {
+        'header': 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+        'strapline': 'Vestibulum dictum tellus et posuere mollis. Nullam quis aliquam velit. Nullam maximus ipsum quis tristique auctor. Quisque id libero sit amet tellus ullamcorper varius sit amet eget dui.',
+        'defaultBgImg': asset("https://burst.shopifycdn.com/photos/pet-accessory_925x.jpg"),
+        'positionTopPercentage': '50',
+        'showBtn': true,
+        'buttonText': 'Button',
+        'action': 'external',
+        'url': 'http://docs.basekit.com',
+        'target': '_blank'
+    })|raw}}
+
+</div>

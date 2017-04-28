@@ -1,59 +1,102 @@
-// -----------------------------------
-// Snippet Template: Header Standard
-// -----------------------------------
+
+// --------------------------------------
+//  Snippet Template: Header Standard
+// --------------------------------------
 
 
-// In: 'Snippets > Headers > Header Standard'
 
+//  Layout
+// --------------------------------------
 
-// -----------------------------------
+//  1. Logo Widget (left)
+//  2. Companyname Widget(left)
+//  3. Navigation (right)
 
-//  *** LAYOUT INFO ***
+// --------------------------------------
 
-//  1. Logo & Company Name (left)
-//  2. Navigation (right)
-
-// -----------------------------------
 
 
 .template-header--standard {
-    .flex-display;
-    .align-items(center);
-    .justify-content(space-between);
-    padding: @value__header--spacing;
     background-color: @color__header--background;
 
-    @media @tablet {
-        display: block;
+
+    &.navigation--icon .template-container {
+
+        @media @tablet {
+            .flex-display;
+            .align-items(flex-start);
+        }
     }
 
 
-    // Header Item: Logo / Companyname
-    .header-item--logo-companyname {
-        .flex-display;
-        .align-items(center);
-        min-width: 370px;
+    .template-container {
+         padding: 30px;
 
-        @media @mobile {
+        // Flex
+        .align-items(center);
+        .justify-content(space-between);
+
+        @media @tablet {
             display: block;
         }
     }
 
+
+    .header-item--brand + .header-item--navigation {
+        padding-left: 20px;
+
+        @media @tablet {
+            padding-left: 0;
+        }
+    }
+
+
+    // Header Item: Logo / Companyname
+    .header-item--brand {
+
+        // Flex
+        .flex-display;
+        .align-items(center);
+        .flex(1 1 auto);
+        .flex-wrap(wrap);
+    }
+
+
     // Header Item: Navigation
     .header-item--navigation {
-        .flex(1 1 auto);
+        .flex(1 0 auto);
+
+        @media @mobile {
+            .flex(initial);
+        }
+    }
+
+
+    [data-widget-type="logo"] + [data-widget-type="companyname"] {
+        margin-top: 6px;
     }
 
 
     // Logo
-    .logo {
+    .logo,
+    .company-text {
         margin-right: 20px;
 
         @media @tablet {
             margin-right: 10px;
         }
+
         @media @mobile {
             margin-bottom: 10px;
+        }
+
+
+        &-image {
+            max-width: 650px;
+
+            @media @mobile {
+                max-width: 100%;
+            }
         }
     }
 }

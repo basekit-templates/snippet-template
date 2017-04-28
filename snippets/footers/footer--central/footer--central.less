@@ -1,14 +1,12 @@
+
 // -----------------------------------
 // Snippet Template: Footer Central
 // -----------------------------------
 
 
-// In: 'Snippets > Footers > Footer Central'
 
-
+//  Layout
 // --------------------------------------
-
-//  *** LAYOUT INFO ***
 
 //  1. Profile Widget: Address (center)
 //  2. Profile Widget: Copyright (center)
@@ -16,8 +14,28 @@
 // --------------------------------------
 
 
+
 .template-footer--central {
     background-color: @color__footer--background;
+
+
+
+    // Template Container
+    // -----------------------------
+
+
+    .template-container {
+        padding: 0 30px;
+
+        // Flex
+        .flex-wrap(wrap);
+        .align-items(center);
+        .justify-content(center);
+
+        @media @tablet {
+            padding: 0 20px;
+        }
+    }
 
 
 
@@ -25,20 +43,30 @@
     // -----------------------------
 
 
-    .footer-item {
-        max-width: 75%;
+    [data-widget-type] {
         margin: 0 auto;
+        padding: 15px 0;
+        text-align: center;
 
-        &--profile-last p {
-            padding-bottom: 0;
+        // Flex
+        .flex-basis(100%);
+
+
+        & + [data-widget-type] {
+            padding-top: 0;
         }
     }
 
 
 
-
     // Profile Widget
     // -----------------------------
+
+
+    // Remove spacing from profile widget
+    [data-widget-type="profile"] p {
+        padding-bottom: 0;
+    }
 
 
     // Form
@@ -49,9 +77,11 @@
         margin: 20px 0;
     }
 
+
     // Form Group
     .form-group {
         margin: 0;
+
 
         &:first-child {
             .flex-display;
@@ -59,11 +89,13 @@
         }
     }
 
+
     // Input
     .input {
         min-height: 36px;
         margin-right: 10px;
     }
+
 
     // Label
     .label {
@@ -78,6 +110,7 @@
         padding-bottom: 10px;
     }
 
+
     // Address
     .address-line {
         display: inline-block;
@@ -86,14 +119,16 @@
             padding-bottom: 0;
         }
 
+
         &:after {
             position: relative;
             left: -4px;
             content: ",";
         }
+
+
         &:last-child:after {
             display: none;
         }
     }
-
 }
